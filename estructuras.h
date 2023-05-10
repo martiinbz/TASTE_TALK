@@ -8,9 +8,10 @@
 #endif //EDA2_ESTRUCTURAS_H
 
 typedef struct{
+    int cantidad_de_usuarios;
     char nombre[20];
     char username[20];
-    char contrasena;
+    char contrasena[20];
     int edad;
     char email;
     int amigos;
@@ -29,13 +30,9 @@ struct usuario{
  * Vamos a usar otra estructura para representar la pila, majenar la pila con
  * una estructura es mas practico que tener 3 o 4 independientes para hacerlo.
  */
-struct pila_usuarios {
-    struct usuario *usuarios;
-    int contador;
+typedef struct stack {
+    char usuario[20];
+    int maxsize;
     int top;
 };
 
-struct stack{
-    char names[20];
-    int size;
-};
