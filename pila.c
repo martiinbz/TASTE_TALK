@@ -3,11 +3,11 @@
 //
 // Created by marti on 17/05/2023.
 //
-struct stack *newStack(int capacity) {
+struct stack newStack(int capacity) {
     stack stack_usuarios;
     stack_usuarios.maxsize = capacity;
     stack_usuarios.top = -1;
-    return &stack_usuarios;
+    return stack_usuarios;
 }
 int isempty(struct stack stack_usuarios) {
     return stack_usuarios.top < 0;

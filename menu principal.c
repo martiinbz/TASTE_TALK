@@ -3,6 +3,7 @@
 #include <string.h>
 #include "estructuras.h"
 
+
 int menu(){
     int n, opcion, edad;
     char username[20], contra[20],name[20], email[50], ubicación,platos;
@@ -37,12 +38,11 @@ int menu(){
         printf("Cuáles son tus 5 platos favoritos? Introducelos separados por una coma");
         scanf("%s", platos);
         strcpy(u.platos_favoritos, &platos);
-        char stack_usuarios= newStack( capacity);
-        push( stack_usuarios,  *u.usuario);
+        char  stack_usuarios = newStack(capacity);
+        push(stack_usuarios, *u.usuario);
     };
 
     if (opcion == 2) {
-        
-
-
-    };
+        pop(stack_usuarios);
+    }
+}
