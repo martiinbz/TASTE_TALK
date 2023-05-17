@@ -23,14 +23,19 @@
 
 typedef struct {
     int id;
+    char usuario[20];
     char nombre[50];
     char email[50];
+    char edad[2];
     int num_amigos;
     int amigos[MAX_AMIGOS]; // Arreglo para guardar los IDs de amigos
     int num_publicaciones;
     int solicitudes_amistad[MAX_SOLICITUDES];
     int num_solicitudes;
     char publicaciones[MAX_PUBLICACIONES][500]; // Arreglo para guardar las publicaciones del usuario
+    char platos_favoritos[500];
+    char ubicacion[500];
+    char contrasena[20];
 } Usuario;
 
 // Definimos la estructura de la red social
@@ -40,6 +45,7 @@ typedef struct {
 } RedSocial;
 
 // Funciones para manejar la red social
+void menu(Usuario u);
 void inicializar_red_social(RedSocial *red_social);
 int insertar_usuario(RedSocial *red_social, char *nombre, char *email);
 void listar_usuarios(RedSocial red_social);

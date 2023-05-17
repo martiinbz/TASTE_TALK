@@ -3,4 +3,4 @@ project(EDA2 C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(EDA2 main.c "menu principal.c" estructuras.h)
+add_executable(EDA2 main.c "menu principal.c" estructuras.h pila.c)
