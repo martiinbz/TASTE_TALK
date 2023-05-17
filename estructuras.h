@@ -7,6 +7,55 @@
 
 #endif //EDA2_ESTRUCTURAS_H
 
+#ifndef UNTITLED9_STRUCTS_H
+#define UNTITLED9_STRUCTS_H
+
+#endif //UNTITLED9_STRUCTS_H
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_USUARIOS 100
+#define MAX_AMIGOS 100
+#define MAX_SOLICITUDES 100
+#define MAX_PUBLICACIONES 100
+
+typedef struct {
+    int id;
+    char nombre[50];
+    char email[50];
+    int num_amigos;
+    int amigos[MAX_AMIGOS]; // Arreglo para guardar los IDs de amigos
+    int num_publicaciones;
+    int solicitudes_amistad[MAX_SOLICITUDES];
+    int num_solicitudes;
+    char publicaciones[MAX_PUBLICACIONES][500]; // Arreglo para guardar las publicaciones del usuario
+} Usuario;
+
+// Definimos la estructura de la red social
+typedef struct {
+    int num_usuarios;
+    Usuario usuarios[MAX_USUARIOS]; // Arreglo para guardar todos los usuarios de la red social
+} RedSocial;
+
+// Funciones para manejar la red social
+void inicializar_red_social(RedSocial *red_social);
+int insertar_usuario(RedSocial *red_social, char *nombre, char *email);
+void listar_usuarios(RedSocial red_social);
+void submenu_usuario(RedSocial *red_social, int id_usuario);
+void enviar_solicitud_amistad(RedSocial *red_social, int id_emisor, int id_receptor);
+void gestionar_solicitudes_pendientes(RedSocial *red_social, int id_usuario);
+void realizar_publicacion(RedSocial *red_social, int id_usuario, char *publicacion);
+void listar_publicaciones_usuario(RedSocial red_social, int id_usuario);
+
+
+
+
+
+
+
+/*
 typedef struct{
     int cantidad_de_usuarios;
     char nombre[20];
