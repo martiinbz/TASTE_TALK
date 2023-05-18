@@ -38,10 +38,16 @@ typedef struct {
     char contrasena[20];
 } Usuario;
 
+//Creamos una lista dinámica
+typedef struct NodoUsuario {
+    Usuario usuario;
+    struct NodoUsuario* siguiente;
+} NodoUsuario;
+
 // Definimos la estructura de la red social
 typedef struct {
+    NodoUsuario* cabeza;
     int num_usuarios;
-    Usuario usuarios[MAX_USUARIOS]; // Arreglo para guardar todos los usuarios de la red social
 } RedSocial;
 
 // Funciones para manejar la red social
@@ -89,5 +95,6 @@ typedef struct stack {
     char usuario[20];
     int maxsize;
     int top;
-};
+}stack;
+
 
