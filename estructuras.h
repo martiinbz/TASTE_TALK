@@ -21,45 +21,34 @@
 #define MAX_SOLICITUDES 100
 #define MAX_PUBLICACIONES 100
 
-typedef struct {
+ typedef struct {
     int id;
-    char usuario[20];
-    char nombre[50];
-    char email[50];
-    char edad[2];
-    int num_amigos;
-    int amigos[MAX_AMIGOS]; // Arreglo para guardar los IDs de amigos
-    int num_publicaciones;
-    int solicitudes_amistad[MAX_SOLICITUDES];
-    int num_solicitudes;
-    char publicaciones[MAX_PUBLICACIONES][500]; // Arreglo para guardar las publicaciones del usuario
-    char platos_favoritos[500];
-    char ubicacion[500];
-    char contrasena[20];
+    char *usuario[20];
+    char *nombre[50];
+    char *email[50];
+    char *edad[2];
+    int *num_amigos;
+    int *amigos[MAX_AMIGOS]; // Arreglo para guardar los IDs de amigos
+    int *num_publicaciones;
+    int *solicitudes_amistad[MAX_SOLICITUDES];
+    int *num_solicitudes;
+    char *publicaciones[MAX_PUBLICACIONES][500]; // Arreglo para guardar las publicaciones del usuario
+    char *platos_favoritos[500];
+    char *ubicacion[500];
+    char *contrasena[20];
 } Usuario;
 
-//Creamos una lista dinámica
-typedef struct NodoUsuario {
-    Usuario usuario;
-    struct NodoUsuario* siguiente;
-} NodoUsuario;
-
-// Definimos la estructura de la red social
-typedef struct {
-    NodoUsuario* cabeza;
-    int num_usuarios;
-} RedSocial;
+struct Red_social{
+    char *username;
+    int numero_de_usuarios;
+    struct Red_social *siguiente;
+};
 
 // Funciones para manejar la red social
-void menu(Usuario u);
-void inicializar_red_social(RedSocial *red_social);
-int insertar_usuario(RedSocial *red_social, char *nombre, char *email);
-void listar_usuarios(RedSocial red_social);
-void submenu_usuario(RedSocial *red_social, int id_usuario);
-void enviar_solicitud_amistad(RedSocial *red_social, int id_emisor, int id_receptor);
-void gestionar_solicitudes_pendientes(RedSocial *red_social, int id_usuario);
-void realizar_publicacion(RedSocial *red_social, int id_usuario, char *publicacion);
-void listar_publicaciones_usuario(RedSocial red_social, int id_usuario);
+void menu_principal();
+struct Usuario *preguntas();
+void almacenar_datos();
+int push(struct pila_usuarios **stack,char usuario);
 
 
 
@@ -91,10 +80,6 @@ struct usuario{
  * Vamos a usar otra estructura para representar la pila, majenar la pila con
  * una estructura es mas practico que tener 3 o 4 independientes para hacerlo.
  */
-typedef struct stack {
-    char usuario[20];
-    int maxsize;
-    int top;
-}stack;
+
 
 

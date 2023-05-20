@@ -128,6 +128,30 @@ EDA2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/build
 .PHONY : EDA2/fast
 
+funciones_pila_usuarios.obj: funciones_pila_usuarios.c.obj
+.PHONY : funciones_pila_usuarios.obj
+
+# target to build an object file
+funciones_pila_usuarios.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.obj
+.PHONY : funciones_pila_usuarios.c.obj
+
+funciones_pila_usuarios.i: funciones_pila_usuarios.c.i
+.PHONY : funciones_pila_usuarios.i
+
+# target to preprocess a source file
+funciones_pila_usuarios.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.i
+.PHONY : funciones_pila_usuarios.c.i
+
+funciones_pila_usuarios.s: funciones_pila_usuarios.c.s
+.PHONY : funciones_pila_usuarios.s
+
+# target to generate assembly for a file
+funciones_pila_usuarios.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.s
+.PHONY : funciones_pila_usuarios.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -176,6 +200,30 @@ menu_principal.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/menu_principal.c.s
 .PHONY : menu_principal.c.s
 
+pila.obj: pila.c.obj
+.PHONY : pila.obj
+
+# target to build an object file
+pila.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/pila.c.obj
+.PHONY : pila.c.obj
+
+pila.i: pila.c.i
+.PHONY : pila.i
+
+# target to preprocess a source file
+pila.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/pila.c.i
+.PHONY : pila.c.i
+
+pila.s: pila.c.s
+.PHONY : pila.s
+
+# target to generate assembly for a file
+pila.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/pila.c.s
+.PHONY : pila.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -185,12 +233,18 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... EDA2
+	@echo ... funciones_pila_usuarios.obj
+	@echo ... funciones_pila_usuarios.i
+	@echo ... funciones_pila_usuarios.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
 	@echo ... menu_principal.obj
 	@echo ... menu_principal.i
 	@echo ... menu_principal.s
+	@echo ... pila.obj
+	@echo ... pila.i
+	@echo ... pila.s
 .PHONY : help
 
 

@@ -43,33 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-<<<<<<< HEAD
 CMAKE_COMMAND = "E:\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
 RM = "E:\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
-=======
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe"
-
-# The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
->>>>>>> origin/master
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = C:\Users\marti\CLionProjects\EDA2
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = C:\Users\marti\CLionProjects\EDA2\cmake-build-debug
-=======
-CMAKE_SOURCE_DIR = C:\Users\marti\OneDrive\Escritorio\EDA2
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\marti\OneDrive\Escritorio\EDA2\cmake-build-debug
->>>>>>> origin/master
 
 # Include any dependencies generated for this target.
 include CMakeFiles/EDA2.dir/depend.make
@@ -83,7 +69,6 @@ include CMakeFiles/EDA2.dir/progress.make
 include CMakeFiles/EDA2.dir/flags.make
 
 CMakeFiles/EDA2.dir/main.c.obj: CMakeFiles/EDA2.dir/flags.make
-<<<<<<< HEAD
 CMakeFiles/EDA2.dir/main.c.obj: C:/Users/marti/CLionProjects/EDA2/main.c
 CMakeFiles/EDA2.dir/main.c.obj: CMakeFiles/EDA2.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/EDA2.dir/main.c.obj"
@@ -110,77 +95,54 @@ CMakeFiles/EDA2.dir/menu_principal.c.i: cmake_force
 CMakeFiles/EDA2.dir/menu_principal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EDA2.dir/menu_principal.c.s"
 	"E:\CLion 2022.3.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\marti\CLionProjects\EDA2\menu principal.c" -o CMakeFiles\EDA2.dir\menu_principal.c.s
-=======
-CMakeFiles/EDA2.dir/main.c.obj: C:/Users/marti/OneDrive/Escritorio/EDA2/main.c
-CMakeFiles/EDA2.dir/main.c.obj: CMakeFiles/EDA2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\marti\OneDrive\Escritorio\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/EDA2.dir/main.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/EDA2.dir/main.c.obj -MF CMakeFiles\EDA2.dir\main.c.obj.d -o CMakeFiles\EDA2.dir\main.c.obj -c C:\Users\marti\OneDrive\Escritorio\EDA2\main.c
-
-CMakeFiles/EDA2.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EDA2.dir/main.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marti\OneDrive\Escritorio\EDA2\main.c > CMakeFiles\EDA2.dir\main.c.i
-
-CMakeFiles/EDA2.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EDA2.dir/main.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marti\OneDrive\Escritorio\EDA2\main.c -o CMakeFiles\EDA2.dir\main.c.s
-
-CMakeFiles/EDA2.dir/menu_principal.c.obj: CMakeFiles/EDA2.dir/flags.make
-CMakeFiles/EDA2.dir/menu_principal.c.obj: C:/Users/marti/OneDrive/Escritorio/EDA2/menu\ principal.c
-CMakeFiles/EDA2.dir/menu_principal.c.obj: CMakeFiles/EDA2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\marti\OneDrive\Escritorio\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/EDA2.dir/menu_principal.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/EDA2.dir/menu_principal.c.obj -MF CMakeFiles\EDA2.dir\menu_principal.c.obj.d -o CMakeFiles\EDA2.dir\menu_principal.c.obj -c "C:\Users\marti\OneDrive\Escritorio\EDA2\menu principal.c"
-
-CMakeFiles/EDA2.dir/menu_principal.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EDA2.dir/menu_principal.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\marti\OneDrive\Escritorio\EDA2\menu principal.c" > CMakeFiles\EDA2.dir\menu_principal.c.i
-
-CMakeFiles/EDA2.dir/menu_principal.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EDA2.dir/menu_principal.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\marti\OneDrive\Escritorio\EDA2\menu principal.c" -o CMakeFiles\EDA2.dir\menu_principal.c.s
 
 CMakeFiles/EDA2.dir/pila.c.obj: CMakeFiles/EDA2.dir/flags.make
-CMakeFiles/EDA2.dir/pila.c.obj: C:/Users/marti/OneDrive/Escritorio/EDA2/pila.c
+CMakeFiles/EDA2.dir/pila.c.obj: C:/Users/marti/CLionProjects/EDA2/pila.c
 CMakeFiles/EDA2.dir/pila.c.obj: CMakeFiles/EDA2.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\marti\OneDrive\Escritorio\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/EDA2.dir/pila.c.obj"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/EDA2.dir/pila.c.obj -MF CMakeFiles\EDA2.dir\pila.c.obj.d -o CMakeFiles\EDA2.dir\pila.c.obj -c C:\Users\marti\OneDrive\Escritorio\EDA2\pila.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/EDA2.dir/pila.c.obj"
+	"E:\CLion 2022.3.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/EDA2.dir/pila.c.obj -MF CMakeFiles\EDA2.dir\pila.c.obj.d -o CMakeFiles\EDA2.dir\pila.c.obj -c C:\Users\marti\CLionProjects\EDA2\pila.c
 
 CMakeFiles/EDA2.dir/pila.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EDA2.dir/pila.c.i"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marti\OneDrive\Escritorio\EDA2\pila.c > CMakeFiles\EDA2.dir\pila.c.i
+	"E:\CLion 2022.3.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marti\CLionProjects\EDA2\pila.c > CMakeFiles\EDA2.dir\pila.c.i
 
 CMakeFiles/EDA2.dir/pila.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EDA2.dir/pila.c.s"
-	C:\PROGRA~1\JETBRA~1\CLION2~1.1\bin\mingw\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marti\OneDrive\Escritorio\EDA2\pila.c -o CMakeFiles\EDA2.dir\pila.c.s
->>>>>>> origin/master
+	"E:\CLion 2022.3.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marti\CLionProjects\EDA2\pila.c -o CMakeFiles\EDA2.dir\pila.c.s
+
+CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.obj: CMakeFiles/EDA2.dir/flags.make
+CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.obj: C:/Users/marti/CLionProjects/EDA2/funciones_pila_usuarios.c
+CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.obj: CMakeFiles/EDA2.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.obj"
+	"E:\CLion 2022.3.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.obj -MF CMakeFiles\EDA2.dir\funciones_pila_usuarios.c.obj.d -o CMakeFiles\EDA2.dir\funciones_pila_usuarios.c.obj -c C:\Users\marti\CLionProjects\EDA2\funciones_pila_usuarios.c
+
+CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.i"
+	"E:\CLion 2022.3.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\marti\CLionProjects\EDA2\funciones_pila_usuarios.c > CMakeFiles\EDA2.dir\funciones_pila_usuarios.c.i
+
+CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.s"
+	"E:\CLion 2022.3.1\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\marti\CLionProjects\EDA2\funciones_pila_usuarios.c -o CMakeFiles\EDA2.dir\funciones_pila_usuarios.c.s
 
 # Object files for target EDA2
 EDA2_OBJECTS = \
 "CMakeFiles/EDA2.dir/main.c.obj" \
-<<<<<<< HEAD
-"CMakeFiles/EDA2.dir/menu_principal.c.obj"
-=======
 "CMakeFiles/EDA2.dir/menu_principal.c.obj" \
-"CMakeFiles/EDA2.dir/pila.c.obj"
->>>>>>> origin/master
+"CMakeFiles/EDA2.dir/pila.c.obj" \
+"CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.obj"
 
 # External object files for target EDA2
 EDA2_EXTERNAL_OBJECTS =
 
 EDA2.exe: CMakeFiles/EDA2.dir/main.c.obj
 EDA2.exe: CMakeFiles/EDA2.dir/menu_principal.c.obj
-<<<<<<< HEAD
-=======
 EDA2.exe: CMakeFiles/EDA2.dir/pila.c.obj
->>>>>>> origin/master
+EDA2.exe: CMakeFiles/EDA2.dir/funciones_pila_usuarios.c.obj
 EDA2.exe: CMakeFiles/EDA2.dir/build.make
 EDA2.exe: CMakeFiles/EDA2.dir/linklibs.rsp
 EDA2.exe: CMakeFiles/EDA2.dir/objects1.rsp
 EDA2.exe: CMakeFiles/EDA2.dir/link.txt
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable EDA2.exe"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\marti\OneDrive\Escritorio\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable EDA2.exe"
->>>>>>> origin/master
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable EDA2.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\EDA2.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -192,10 +154,6 @@ CMakeFiles/EDA2.dir/clean:
 .PHONY : CMakeFiles/EDA2.dir/clean
 
 CMakeFiles/EDA2.dir/depend:
-<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\marti\CLionProjects\EDA2 C:\Users\marti\CLionProjects\EDA2 C:\Users\marti\CLionProjects\EDA2\cmake-build-debug C:\Users\marti\CLionProjects\EDA2\cmake-build-debug C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\CMakeFiles\EDA2.dir\DependInfo.cmake --color=$(COLOR)
-=======
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\marti\OneDrive\Escritorio\EDA2 C:\Users\marti\OneDrive\Escritorio\EDA2 C:\Users\marti\OneDrive\Escritorio\EDA2\cmake-build-debug C:\Users\marti\OneDrive\Escritorio\EDA2\cmake-build-debug C:\Users\marti\OneDrive\Escritorio\EDA2\cmake-build-debug\CMakeFiles\EDA2.dir\DependInfo.cmake --color=$(COLOR)
->>>>>>> origin/master
 .PHONY : CMakeFiles/EDA2.dir/depend
 

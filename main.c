@@ -3,10 +3,7 @@
 
 
 int main(){
-    Usuario *u;
-    printf("gola");
-    menu(*u);
-    printf("Main!");
+    almacenar_datos();
 };
 
 int read_option(void){
