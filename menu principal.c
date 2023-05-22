@@ -72,7 +72,6 @@ int contar_numero_de_usuarios(Usuario u[]){
     printf("puta");
 }
 void recopilar_datos( Usuario u[],int numero_de_usuarios){
-
     u[numero_de_usuarios].id=numero_de_usuarios;
     printf("\n Introduce tu nombre");
     getchar();
@@ -97,7 +96,7 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){
     printf("\nCuales son tus 5 platos favoritos? Introducelos separados por una coma");
     gets(u[numero_de_usuarios].platos_favoritos);
 
-    printf("\n ID: %d\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
+    printf("\n ID: %d\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",&u[numero_de_usuarios].id,u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
 
 };
 
