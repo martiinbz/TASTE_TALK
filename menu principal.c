@@ -2,18 +2,11 @@
 #include <malloc.h>
 #include <string.h>
 #include "estructuras.h"
+#include "Estructuras_pila.h"
 
 
 
 
-// Función para inicializar la red social
-void inicializar_red_social(struct Red_social *red_social) {
-    red_social->numero_de_usuarios=0;
-}
-int contador_usuarios(struct Red_social *red_social){
-    red_social->numero_de_usuarios+=1;
-    return red_social->numero_de_usuarios;
-}
 // Función para insertar un nuevo usuario en la red social
 /*
 void insertar_usuario(RedSocial* red_social,char *nombre,char *email) {
@@ -69,10 +62,10 @@ int contar_numero_de_usuarios(Usuario u[]){
             printf("hay %d usuarios registraos",i);
         };
     }
-    printf("puta");
+    printf("hola");
 }
-void recopilar_datos( Usuario u[],int numero_de_usuarios){
-    u[numero_de_usuarios].id=numero_de_usuarios;
+void recopilar_datos(Usuario u[], int numero_de_usuarios){
+
     printf("\n Introduce tu nombre");
     getchar();
     fgets(u[numero_de_usuarios].nombre,20,stdin);
@@ -96,15 +89,17 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){
     printf("\nCuales son tus 5 platos favoritos? Introducelos separados por una coma");
     gets(u[numero_de_usuarios].platos_favoritos);
 
-    printf("\n ID: %d\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",&u[numero_de_usuarios].id,u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
+    printf("\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
 
 };
 
 
 void menu_principal(Usuario u[]) {
-    int opcion=1000;
+    int opcion=1000,top=-1;
+    int numero_de_usuarios=0;
+    char pila_de_usuarios[20];
     while(opcion!=4){
-        int numero_de_usuarios=0;
+
         printf("\n 1. Registarse");
         printf("\n 2. Lista de Usuarios registrados");
         printf("\n 3. Iniciar sesion");
@@ -112,12 +107,21 @@ void menu_principal(Usuario u[]) {
         scanf("%d", &opcion);
         if (opcion == 1) {
             recopilar_datos(u,numero_de_usuarios);
+            push(pila_de_usuarios,&top,u[numero_de_usuarios].usuario,20);
+            printf("%d",top);
             numero_de_usuarios+=1;
 
 
 
 
 
+
+        }
+        if(opcion==2){
+            for(int i=top;i<0;i--){
+                printf("\n %s",pila_de_usuarios[i]);
+
+            }
         }
     }
 }

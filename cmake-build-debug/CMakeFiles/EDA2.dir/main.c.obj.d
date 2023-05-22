@@ -22,4 +22,5 @@ CMakeFiles/EDA2.dir/main.c.obj: C:\Users\marti\CLionProjects\EDA2\main.c \
  E:/CLion\ 2022.3.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/string.h \
- E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h
+ E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:\Users\marti\CLionProjects\EDA2\Estructuras_pila.h

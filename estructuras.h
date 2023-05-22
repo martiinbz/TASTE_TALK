@@ -22,7 +22,7 @@
 #define MAX_PUBLICACIONES 100
 
 typedef struct {
-    int id;
+    int *id;
     char usuario[20];
     char nombre[50];
     char email[50];
@@ -46,9 +46,9 @@ struct Red_social{
 
 // Funciones para manejar la red social
 void menu_principal();
-void recopilar_datos(Usuario u[],int num_usuarios);
+void recopilar_datos(Usuario u[], int numero_de_usuarios);
 void almacenar_datos();
-int push(struct pila_usuarios **stack,char usuario);
+void push(char pila[],int *top,char usuario[],int MAXSIZE);
 int contar_numero_de_usuarios(Usuario u[]);
 
 

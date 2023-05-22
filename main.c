@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include "estructuras.h"
-
+#include "Estructuras_pila.h"
 
 int main(){
     Usuario u[5];
-    menu_principal(u);
-    int numero_de_usuarios;
-    contar_numero_de_usuarios(u);
-    numero_de_usuarios=contar_numero_de_usuarios(u);
-    recopilar_datos(u,numero_de_usuarios);
+    struct pila_usuarios pila_usuarios;
+    menu_principal(u,pila_usuarios,pila_usuarios);
+
 };
 
 int read_option(void){

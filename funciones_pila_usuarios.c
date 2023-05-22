@@ -9,35 +9,30 @@
 #include "Estructuras_pila.h"
 #include "estructuras.h"
 
-struct pila_usuarios *crear_pila(char usuario ){
-    struct pila_usuarios *usuarios=malloc(sizeof(struct pila_usuarios));
-    strcpy(usuarios->usuario,&usuario);
-    usuarios->siguiente=NULL;
-    return usuarios;
-}
-int push(struct pila_usuarios **stack,char usuario){
-    struct pila_usuarios *usuarios= crear_pila(usuario);
-    strcpy(usuarios->siguiente,&usuario);
-    *stack=usuarios;
-}
 
-char pop(struct pila_usuarios **stack){
-    if(*stack==NULL){
-        return -1;
+
+void push(char pila[],int *top,char *usuario,int MAXSIZE){
+    if(*top >=MAXSIZE-1){
+        printf("La pila está llena");
+        return;
     }
-    struct pila_usuarios *usuarios=*stack;
-    char usuario_pop[20];
-    strcpy(usuario_pop,usuarios->usuario);
-    *stack=usuarios->siguiente;
-    free(usuarios);
-    return usuario_pop[20];
+    (*top)++;
+    strcpy(&pila[*top],usuario);
+
 }
-int isempty(struct pila_usuarios *stack){
-    return stack==NULL;
-}
-void imprimir_pila(struct pila_usuarios *stack){
-    while(stack!=NULL){
-        printf("%s\n",stack->usuario);
-        stack=stack->siguiente;
+void pop(char pila[],int top,int MAXSIZE){
+    if(top==-1){
+        printf("La pila está vacía!");
     }
+    else{
+        printf("Se ha eliminado a %s",pila[top]);
+        if (top==MAXSIZE-1){
+            top=-1;
+        }
+        else{
+            top--;
+        }
+
+    }
+
 }
