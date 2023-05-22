@@ -21,22 +21,22 @@
 #define MAX_SOLICITUDES 100
 #define MAX_PUBLICACIONES 100
 
- typedef struct {
+typedef struct {
     int id;
-    char *usuario[20];
-    char *nombre[50];
-    char *email[50];
-    char *edad[2];
-    int *num_amigos;
-    int *amigos[MAX_AMIGOS]; // Arreglo para guardar los IDs de amigos
-    int *num_publicaciones;
-    int *solicitudes_amistad[MAX_SOLICITUDES];
-    int *num_solicitudes;
-    char *publicaciones[MAX_PUBLICACIONES][500]; // Arreglo para guardar las publicaciones del usuario
-    char *platos_favoritos[500];
-    char *ubicacion[500];
-    char *contrasena[20];
-} Usuario;
+    char usuario[20];
+    char nombre[50];
+    char email[50];
+    char edad[2];
+    int num_amigos;
+    int amigos[MAX_AMIGOS]; // Arreglo para guardar los IDs de amigos
+    int num_publicaciones;
+    int solicitudes_amistad[MAX_SOLICITUDES];
+    int num_solicitudes;
+    char publicaciones[MAX_PUBLICACIONES][500]; // Arreglo para guardar las publicaciones del usuario
+    char platos_favoritos[500];
+    char ubicacion[500];
+    char contrasena[20];
+}Usuario;
 
 struct Red_social{
     char *username;
@@ -46,9 +46,10 @@ struct Red_social{
 
 // Funciones para manejar la red social
 void menu_principal();
-struct Usuario *preguntas();
+void recopilar_datos(Usuario u[],int num_usuarios);
 void almacenar_datos();
 int push(struct pila_usuarios **stack,char usuario);
+int contar_numero_de_usuarios(Usuario u[]);
 
 
 
@@ -56,30 +57,6 @@ int push(struct pila_usuarios **stack,char usuario);
 
 
 
-/*
-typedef struct{
-    int cantidad_de_usuarios;
-    char nombre[20];
-    char username[20];
-    char contrasena[20];
-    int edad;
-    char email;
-    int amigos;
-    char ubicación;
-    char platos_favoritos;
-
-}Usuario;
-
-struct usuario{
-    int x;
-    int y;
-};
-
-
-/*
- * Vamos a usar otra estructura para representar la pila, majenar la pila con
- * una estructura es mas practico que tener 3 o 4 independientes para hacerlo.
- */
 
 
 

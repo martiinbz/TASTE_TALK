@@ -3,7 +3,12 @@
 
 
 int main(){
-    almacenar_datos();
+    Usuario u[5];
+    menu_principal(u);
+    int numero_de_usuarios;
+    contar_numero_de_usuarios(u);
+    numero_de_usuarios=contar_numero_de_usuarios(u);
+    recopilar_datos(u,numero_de_usuarios);
 };
 
 int read_option(void){

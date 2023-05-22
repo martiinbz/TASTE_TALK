@@ -63,53 +63,62 @@ void listar_usuarios(const RedSocial* red_social) {
 
  */
 // Función para el submenú del usuario
+int contar_numero_de_usuarios(Usuario u[]){
+    for(int i=0;i<20;i++){
+        if (&u[i].nombre==NULL){
+            printf("hay %d usuarios registraos",i);
+        };
+    }
+    printf("puta");
+}
+void recopilar_datos( Usuario u[],int numero_de_usuarios){
 
-
-
- struct Usuario *preguntas(int numero_de_usuarios){
-    Usuario u[numero_de_usuarios];
-    u->id=numero_de_usuarios;
+    u[numero_de_usuarios].id=numero_de_usuarios;
     printf("\n Introduce tu nombre");
-    gets(u[numero_de_usuarios].nombre);
+    getchar();
+    fgets(u[numero_de_usuarios].nombre,20,stdin);
+
     printf("\n Introduce tu nombre de usuario");
-    gets(u[numero_de_usuarios].usuario);
+    fgets(u[numero_de_usuarios].usuario,20,stdin);
+
     printf("\n Introduce tu contraseña");
-    gets(u[numero_de_usuarios].contrasena);
+    fgets(u[numero_de_usuarios].contrasena,20,stdin);
+
     printf("\nIntroduce tu edad");
     scanf("%d",&u[numero_de_usuarios].edad);
+
     printf("\nIntroduce tu email");
+    getchar();
     gets(u[numero_de_usuarios].email);
-    printf("\nDe dónde eres?");
-    gets(u[numero_de_usuarios].ubicacion);
-    printf("\nCuáles son tus 5 platos favoritos? Introducelos separados por una coma");
+
+    printf("\nDe donde eres?");
+    fgets(u[numero_de_usuarios].ubicacion,20,stdin);
+
+    printf("\nCuales son tus 5 platos favoritos? Introducelos separados por una coma");
     gets(u[numero_de_usuarios].platos_favoritos);
-    return &u[numero_de_usuarios];
-}
 
-void agregar_usuario(struct Red_social*red_social){
-   preguntas( red_social->numero_de_usuarios);
+    printf("\n ID: %d\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
 
+};
 
 
-
-
-
-
-
-void menu_principal() {
-    Usuario usuario;
-    struct Red_social red_social;
-    int opcion;
-    printf("\n 1. Insertar nuevo usuario");
-    printf("\n 2. Listar todos los usuarios existentes");
-    printf("\n 3. Operar como un usuario específico");
-
-    scanf("%d", &opcion);
-
-    if (opcion == 1) {
-        agregar_usuario();
+void menu_principal(Usuario u[]) {
+    int opcion=1000;
+    while(opcion!=4){
+        int numero_de_usuarios=0;
+        printf("\n 1. Registarse");
+        printf("\n 2. Lista de Usuarios registrados");
+        printf("\n 3. Iniciar sesion");
+        printf("\n 4.Salir de la aplicación");
+        scanf("%d", &opcion);
+        if (opcion == 1) {
+            recopilar_datos(u,numero_de_usuarios);
+            numero_de_usuarios+=1;
 
 
 
+
+
+        }
     }
 }
