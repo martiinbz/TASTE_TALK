@@ -40,4 +40,4 @@ void push(struct Stack* stack, char* str){ //funcion para hacer push
 
     }
 
-}
+}*/
