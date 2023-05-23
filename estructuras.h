@@ -20,13 +20,14 @@
 #define MAX_AMIGOS 100
 #define MAX_SOLICITUDES 100
 #define MAX_PUBLICACIONES 100
+
 struct Stack {
-    char data[100][100];
+    char data[100][100]; //estructura de la pila (aun se tiene que hacer dinámica)
     int top;
 };
 
 
- typedef struct {
+ typedef struct { //estructura para los usuarios
     int *id;
     char usuario[20];
     char nombre[50];
@@ -43,11 +44,6 @@ struct Stack {
     char contrasena[20];
 } Usuario;
 
-struct Red_social{
-    char *username;
-    int numero_de_usuarios;
-    struct Red_social *siguiente;
-};
 
 // Funciones para manejar la red social
 void menu_principal(Usuario u[]);
@@ -55,39 +51,3 @@ void init(struct Stack* stack);
 void recopilar_datos(Usuario u[], int numero_de_usuarios);
 void almacenar_datos();
 void push(struct Stack* stack, char* str);
-/*void push(char *pila[],int *top,char usuario[],int MAXSIZE);
-int contar_numero_de_usuarios(Usuario u[]);
-
-
-
-
-
-
-
-/*
-typedef struct{
-    int cantidad_de_usuarios;
-    char nombre[20];
-    char username[20];
-    char contrasena[20];
-    int edad;
-    char email;
-    int amigos;
-    char ubicación;
-    char platos_favoritos;
-
-}Usuario;
-
-struct usuario{
-    int x;
-    int y;
-};
-
-
-/*
- * Vamos a usar otra estructura para representar la pila, majenar la pila con
- * una estructura es mas practico que tener 3 o 4 independientes para hacerlo.
- */
-
-
-

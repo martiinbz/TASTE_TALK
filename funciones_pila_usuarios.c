@@ -11,12 +11,12 @@
 
 
 // Initialize the stack
-void init(struct Stack* stack) {
+void init(struct Stack* stack) { //funcion para inicializar la pila
     stack->top = -1;
 }
 
 // Push a string onto the stack
-void push(struct Stack* stack, char* str){
+void push(struct Stack* stack, char* str){ //funcion para hacer push
     if (stack->top == 20 - 1) {
         printf("Stack overflow!\n");
         return;
@@ -25,18 +25,7 @@ void push(struct Stack* stack, char* str){
     strcpy(stack->data[stack->top], str);
 }
 
-/*void push(char *pila[],int *top,char usuario,int MAXSIZE){
-    if(*top >=MAXSIZE-1){
-        printf("La pila está llena");
-        return;
-    }
-    (*top)++;
-    printf("hola");
-    strcpy(pila[*top],usuario);
-    printf("hola");
-
-}
-void pop(char pila[],int top,int MAXSIZE){
+/*void pop(char pila[],int top,int MAXSIZE){   //esta creo que no funciona
     if(top==-1){
         printf("La pila está vacía!");
     }
@@ -51,4 +40,4 @@ void pop(char pila[],int top,int MAXSIZE){
 
     }
 
-}*/
+}

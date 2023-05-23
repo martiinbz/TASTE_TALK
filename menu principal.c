@@ -101,21 +101,22 @@ void menu_principal(Usuario u[]) {
 
     while(opcion!=4){
         char usuario[20];
+        printf("\n Welcome to Taste Talk!\n");
         printf("\n 1. Registarse");
         printf("\n 2. Lista de Usuarios registrados");
         printf("\n 3. Iniciar sesion");
-        printf("\n 4.Salir de la aplicación");
+        printf("\n 4.Salir de la aplicacion");
         scanf("%d", &opcion);
         if (opcion == 1) {
-            recopilar_datos(u,numero_de_usuarios);
-            strcpy(usuario,u[numero_de_usuarios].usuario);
-            push(&pila_usuarios, usuario);
-            numero_de_usuarios+=1;
+            recopilar_datos(u,numero_de_usuarios); //preguntamos al usuario los datos necesarios
+            strcpy(usuario,u[numero_de_usuarios].usuario); //metemos el nombre de usuario en una variable
+            push(&pila_usuarios, usuario); //metemos el nombre de usuario en la pila
+            numero_de_usuarios+=1; //incrementamos el contador de usuarios
         }
         if(opcion==2){
             printf("Los usuarios registrados en la aplicacion son:\n");
             for(int i=pila_usuarios.top;i>=0;i--){
-                printf("%s",&pila_usuarios.data[i]);
+                printf("%s",&pila_usuarios.data[i]); //vamos imprimiendo 1 a 1 todos los usuarios registrados
             }
         }
     }
