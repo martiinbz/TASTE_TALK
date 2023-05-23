@@ -9,9 +9,5 @@
 #include <stdio.h>
 #endif //EDA2_ESTRUCTURAS_PILA_H
 
-typedef struct pila_usuarios{
-    char usuario[20];
-    struct pila_usuarios *siguiente;
-};
 
 

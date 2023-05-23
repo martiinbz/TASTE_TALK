@@ -2,10 +2,11 @@
 #include <malloc.h>
 #include <string.h>
 #include "estructuras.h"
-#include "Estructuras_pila.h"
 
 
 
+
+// Función para inicializar la red social
 
 // Función para insertar un nuevo usuario en la red social
 /*
@@ -62,10 +63,9 @@ int contar_numero_de_usuarios(Usuario u[]){
             printf("hay %d usuarios registraos",i);
         };
     }
-    printf("hola");
+    printf("puta");
 }
-void recopilar_datos(Usuario u[], int numero_de_usuarios){
-
+void recopilar_datos( Usuario u[],int numero_de_usuarios){
     printf("\n Introduce tu nombre");
     getchar();
     fgets(u[numero_de_usuarios].nombre,20,stdin);
@@ -95,11 +95,12 @@ void recopilar_datos(Usuario u[], int numero_de_usuarios){
 
 
 void menu_principal(Usuario u[]) {
-    int opcion=1000,top=-1;
-    int numero_de_usuarios=0;
-    char pila_de_usuarios[20];
-    while(opcion!=4){
+    struct Stack pila_usuarios;
+    init( &pila_usuarios); //iniciamos la pila que contendrá los usuarios registrados
+    int opcion=1000,numero_de_usuarios=0;
 
+    while(opcion!=4){
+        char usuario[20];
         printf("\n 1. Registarse");
         printf("\n 2. Lista de Usuarios registrados");
         printf("\n 3. Iniciar sesion");
@@ -107,20 +108,14 @@ void menu_principal(Usuario u[]) {
         scanf("%d", &opcion);
         if (opcion == 1) {
             recopilar_datos(u,numero_de_usuarios);
-            push(pila_de_usuarios,&top,u[numero_de_usuarios].usuario,20);
-            printf("%d",top);
+            strcpy(usuario,u[numero_de_usuarios].usuario);
+            push(&pila_usuarios, usuario);
             numero_de_usuarios+=1;
-
-
-
-
-
-
         }
         if(opcion==2){
-            for(int i=top;i<0;i--){
-                printf("\n %s",pila_de_usuarios[i]);
-
+            printf("Los usuarios registrados en la aplicacion son:\n");
+            for(int i=pila_usuarios.top;i>=0;i--){
+                printf("%s",&pila_usuarios.data[i]);
             }
         }
     }
