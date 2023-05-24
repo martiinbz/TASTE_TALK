@@ -18,7 +18,7 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunt
     fgets(u[numero_de_usuarios].usuario,20,stdin);
 
     printf("\n Introduce tu contraseña");
-    fgets(u[numero_de_usuarios].contrasena,20,stdin);    //FALTA TRATAR LOS ERRORES(poner una letra en la edad, requisitos contras...)
+    fgets(u[numero_de_usuarios].contrasena,20,stdin);    //FALTA TRATAR LOS ERRORES(poner una letra en la edad, requisitos contras y eso)
 
     printf("\nIntroduce tu edad");
     scanf("%d",&u[numero_de_usuarios].edad);
