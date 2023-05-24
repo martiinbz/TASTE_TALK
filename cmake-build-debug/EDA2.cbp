@@ -76,9 +76,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/marti/CLionProjects/EDA2/Estructuras_pila.h">
-			<Option target="EDA2"/>
-		</Unit>
 		<Unit filename="C:/Users/marti/CLionProjects/EDA2/estructuras.h">
 			<Option target="EDA2"/>
 		</Unit>
@@ -89,9 +86,6 @@
 			<Option target="EDA2"/>
 		</Unit>
 		<Unit filename="C:/Users/marti/CLionProjects/EDA2/menu principal.c">
-			<Option target="EDA2"/>
-		</Unit>
-		<Unit filename="C:/Users/marti/CLionProjects/EDA2/pila.c">
 			<Option target="EDA2"/>
 		</Unit>
 		<Unit filename="C:/Users/marti/CLionProjects/EDA2/CMakeLists.txt">

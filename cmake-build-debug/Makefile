@@ -200,30 +200,6 @@ menu_principal.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/menu_principal.c.s
 .PHONY : menu_principal.c.s
 
-pila.obj: pila.c.obj
-.PHONY : pila.obj
-
-# target to build an object file
-pila.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/pila.c.obj
-.PHONY : pila.c.obj
-
-pila.i: pila.c.i
-.PHONY : pila.i
-
-# target to preprocess a source file
-pila.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/pila.c.i
-.PHONY : pila.c.i
-
-pila.s: pila.c.s
-.PHONY : pila.s
-
-# target to generate assembly for a file
-pila.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/pila.c.s
-.PHONY : pila.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -242,9 +218,6 @@ help:
 	@echo ... menu_principal.obj
 	@echo ... menu_principal.i
 	@echo ... menu_principal.s
-	@echo ... pila.obj
-	@echo ... pila.i
-	@echo ... pila.s
 .PHONY : help
 
 

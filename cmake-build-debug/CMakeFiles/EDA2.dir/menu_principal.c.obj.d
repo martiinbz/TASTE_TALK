@@ -23,5 +23,4 @@ CMakeFiles/EDA2.dir/menu_principal.c.obj: \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/string.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:\Users\marti\CLionProjects\EDA2\estructuras.h \
- C:\Users\marti\CLionProjects\EDA2\Estructuras_pila.h
+ C:\Users\marti\CLionProjects\EDA2\estructuras.h

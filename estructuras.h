@@ -21,24 +21,25 @@
 #define MAX_SOLICITUDES 100
 #define MAX_PUBLICACIONES 100
 
-struct Stack {
-    char data[100][100]; //estructura de la pila (aun se tiene que hacer dinámica)
+//***ESTRUCTURA DE LA PILA DINÁMICA***
+struct stack {
     int top;
+    int capacity;
+    char username[20][20];
 };
-
-
- typedef struct { //estructura para los usuarios
+//****ESTRUCTURA PARA LA INFORMACIÓN DE LOS USUARIOS****
+ typedef struct {
     int *id;
     char usuario[20];
     char nombre[50];
     char email[50];
     char edad[2];
     int num_amigos;
-    int amigos[MAX_AMIGOS]; // Arreglo para guardar los IDs de amigos
+    int amigos[MAX_AMIGOS];
     int num_publicaciones;
     int solicitudes_amistad[MAX_SOLICITUDES];
     int num_solicitudes;
-    char publicaciones[MAX_PUBLICACIONES][500]; // Arreglo para guardar las publicaciones del usuario
+    char publicaciones[MAX_PUBLICACIONES][500];
     char platos_favoritos[500];
     char ubicacion[500];
     char contrasena[20];
@@ -46,8 +47,9 @@ struct Stack {
 
 
 // Funciones para manejar la red social
-void menu_principal(Usuario u[]);
-void init(struct Stack* stack);
 void recopilar_datos(Usuario u[], int numero_de_usuarios);
 void almacenar_datos();
-void push(struct Stack* stack, char* str);
+void push_user(struct stack *stack, char *string);
+void print_stack(struct stack *stack);
+void  init_pila(struct stack*pila);
+void menu_principal(Usuario u[]);

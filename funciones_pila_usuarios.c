@@ -6,38 +6,30 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-#include "Estructuras_pila.h"
 #include "estructuras.h"
+//********ESTO ES PARA UNA PILA DINÁMICA(FUNCIONA PERO AUN NO LA USAMOS)*******
 
 
-// Initialize the stack
-void init(struct Stack* stack) { //funcion para inicializar la pila
+/*void  init_pila(struct stack*pila) {
+    struct stack *stack = malloc(sizeof(struct stack));
     stack->top = -1;
+    stack->capacity = 10; //asignamos unos valores de capacidad inicial
+    stack->username = malloc(sizeof(char *) * stack->capacity);
 }
 
-// Push a string onto the stack
-void push(struct Stack* stack, char* str){ //funcion para hacer push
-    if (stack->top == 20 - 1) {
-        printf("Stack overflow!\n");
-        return;
+void push_user(struct stack *stack, char *string) {
+    if (stack->top == stack->capacity - 1) {
+        stack->capacity *= 2;
+        stack->username = realloc(stack->username, sizeof(char) * stack->capacity);
     }
     stack->top+=1;
-    strcpy(stack->data[stack->top], str);
+    strcpy(stack->username[stack->top],string);
+
 }
 
-/*void pop(char pila[],int top,int MAXSIZE){   //esta creo que no funciona
-    if(top==-1){
-        printf("La pila está vacía!");
+void print_stack(struct stack *stack) {
+    for (int i = 0; i <= stack->top; i++) {
+        printf("%s\n", &stack->username[i]);
     }
-    else{
-        printf("Se ha eliminado a %s",pila[top]);
-        if (top==MAXSIZE-1){
-            top=-1;
-        }
-        else{
-            top--;
-        }
-
-    }
-
-}*/
+}
+*/
