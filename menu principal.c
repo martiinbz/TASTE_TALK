@@ -68,8 +68,8 @@ void menu_principal(Usuario u[]) {
             printf("\nPROXIMAMENTE\n");
         }
         if(opcion==4){
-            printf("\nHasta otra!");
-            break;
+            printf("\nGracias por usar nuestra aplicacion!\n Hecha por:\n Martin Barcena \n Arnau Gil \n Adria Casals");
+
         }
         else{
             printf("\nSelecciona una opcion valida");

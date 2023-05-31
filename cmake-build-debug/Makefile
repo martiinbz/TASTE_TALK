@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "E:\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "E:\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\marti\CLionProjects\EDA2
+CMAKE_SOURCE_DIR = C:\Users\marti\OneDrive\Escritorio\EDA2BUENO
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\marti\CLionProjects\EDA2\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\marti\OneDrive\Escritorio\EDA2BUENO\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\marti\CLionProjects\EDA2\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"E:\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"E:\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Program Files\JetBrains\CLion 2022.3.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\CMakeFiles C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\marti\OneDrive\Escritorio\EDA2BUENO\cmake-build-debug\CMakeFiles C:\Users\marti\OneDrive\Escritorio\EDA2BUENO\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\marti\CLionProjects\EDA2\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\marti\OneDrive\Escritorio\EDA2BUENO\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -127,6 +127,30 @@ EDA2: cmake_check_build_system
 EDA2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/build
 .PHONY : EDA2/fast
+
+OPCION_3.obj: OPCION_3.c.obj
+.PHONY : OPCION_3.obj
+
+# target to build an object file
+OPCION_3.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/OPCION_3.c.obj
+.PHONY : OPCION_3.c.obj
+
+OPCION_3.i: OPCION_3.c.i
+.PHONY : OPCION_3.i
+
+# target to preprocess a source file
+OPCION_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/OPCION_3.c.i
+.PHONY : OPCION_3.c.i
+
+OPCION_3.s: OPCION_3.c.s
+.PHONY : OPCION_3.s
+
+# target to generate assembly for a file
+OPCION_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/OPCION_3.c.s
+.PHONY : OPCION_3.c.s
 
 funciones_pila_usuarios.obj: funciones_pila_usuarios.c.obj
 .PHONY : funciones_pila_usuarios.obj
@@ -200,6 +224,30 @@ menu_principal.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/menu_principal.c.s
 .PHONY : menu_principal.c.s
 
+submenu.obj: submenu.c.obj
+.PHONY : submenu.obj
+
+# target to build an object file
+submenu.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/submenu.c.obj
+.PHONY : submenu.c.obj
+
+submenu.i: submenu.c.i
+.PHONY : submenu.i
+
+# target to preprocess a source file
+submenu.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/submenu.c.i
+.PHONY : submenu.c.i
+
+submenu.s: submenu.c.s
+.PHONY : submenu.s
+
+# target to generate assembly for a file
+submenu.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\EDA2.dir\build.make CMakeFiles/EDA2.dir/submenu.c.s
+.PHONY : submenu.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -209,6 +257,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... EDA2
+	@echo ... OPCION_3.obj
+	@echo ... OPCION_3.i
+	@echo ... OPCION_3.s
 	@echo ... funciones_pila_usuarios.obj
 	@echo ... funciones_pila_usuarios.i
 	@echo ... funciones_pila_usuarios.s
@@ -218,6 +269,9 @@ help:
 	@echo ... menu_principal.obj
 	@echo ... menu_principal.i
 	@echo ... menu_principal.s
+	@echo ... submenu.obj
+	@echo ... submenu.i
+	@echo ... submenu.s
 .PHONY : help
 
 
