@@ -82,6 +82,9 @@
 		<Unit filename="C:/Users/marti/OneDrive/Escritorio/EDA2BUENO/estructuras.h">
 			<Option target="EDA2"/>
 		</Unit>
+		<Unit filename="C:/Users/marti/OneDrive/Escritorio/EDA2BUENO/ficheros/usuarios.txt">
+			<Option target="EDA2"/>
+		</Unit>
 		<Unit filename="C:/Users/marti/OneDrive/Escritorio/EDA2BUENO/funciones_pila_usuarios.c">
 			<Option target="EDA2"/>
 		</Unit>

@@ -15,6 +15,4 @@ int iniciar_sesion(Usuario *u[],char *contrasena,int posicion){
         return 1;
     }
     else return 0;
-
-
 }

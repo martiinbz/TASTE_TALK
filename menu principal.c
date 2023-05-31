@@ -38,8 +38,18 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunt
     //esto es para imprimir los datos recolectados, por si hay algun error y necesitamos mirar si los recolecta bien
 };
 
+int recopilar_datos_fichero(Usuario u[],int numero_de_usuarios,FILE* fichero){
+   while (fscanf(fichero,"%s[^,] %s[^,] %d[^,] %s[^,] %s[^,] %s[^,] %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,&u[numero_de_usuarios].edad,u[numero_de_usuarios].contrasena,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos)==7){
 
+       numero_de_usuarios+=1;
+   }
+   return numero_de_usuarios;
+}
 void menu_principal(Usuario u[]) {
+    FILE* fichero= fopen("ficheros/courses.txt","r");
+    if(fichero==NULL){
+        printf("Esta vacio");
+    }
     int opcion=0,numero_de_usuarios=0;
     char **lista_de_usuarios;
     lista_de_usuarios=(char**)malloc(sizeof(char*)*(numero_de_usuarios+1));//creamos la lista dinamica con capacidad inicial 1
@@ -47,19 +57,29 @@ void menu_principal(Usuario u[]) {
     printf("\n Welcome to Taste Talk!\n");
     while(opcion!=4){
         printf("\n 1. Registarse");
-        printf("\n 2. Lista de Usuarios registrados");
-        printf("\n 3. Iniciar sesion");
-        printf("\n 4.Salir de la aplicacion");
+        printf("\n 2. Registrar usuarios.txt desde un fichero");
+        printf("\n 3. Lista de Usuarios registrados");
+        printf("\n 4. Iniciar sesion");
+        printf("\n 5.Salir de la aplicacion");
         scanf("%d", &opcion);
         if (opcion == 1) {
             recopilar_datos(u,numero_de_usuarios); //preguntamos al usuario los datos necesarios
             lista_de_usuarios[numero_de_usuarios]=u[numero_de_usuarios].usuario; //metemos el nombre de usuario en la lista
-            numero_de_usuarios += 1; //incrementamos el contador de usuarios
+            numero_de_usuarios += 1; //incrementamos el contador de usuarios.txt
             lista_de_usuarios=(char**)realloc(lista_de_usuarios,sizeof(char*)*(numero_de_usuarios+1));//añadimos más memoria en caso de que se tenga que agregar un nuevo user.
 
         }
         if(opcion==2){
-            printf("\nHay %d usuarios registrados,son:\n",numero_de_usuarios);
+            while (fscanf(fichero,"%s[^,] %s[^,] %d[^,] %s[^,] %s[^,] %s[^,] %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,&u[numero_de_usuarios].edad,u[numero_de_usuarios].contrasena,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos)>0){
+                lista_de_usuarios[numero_de_usuarios]=u[numero_de_usuarios].usuario; //metemos el nombre de usuario en la lista
+                numero_de_usuarios+=1;
+                lista_de_usuarios=(char**)realloc(lista_de_usuarios,sizeof(char*)*(numero_de_usuarios+1));
+            }
+
+
+        }
+        if(opcion==3){
+            printf("\nHay %d usuarios.txt registrados,son:\n",numero_de_usuarios);
             for(int i=0;i<=(numero_de_usuarios-1);i++){
                 printf("%s",lista_de_usuarios[i]); //esto va imprimiendo la lista de ususarios
             }
@@ -67,7 +87,7 @@ void menu_principal(Usuario u[]) {
         if(opcion==3){
             printf("\nPROXIMAMENTE\n");
         }
-        if(opcion==4){
+        if(opcion==5){
             printf("\nGracias por usar nuestra aplicacion!\n Hecha por:\n Martin Barcena \n Arnau Gil \n Adria Casals");
 
         }
