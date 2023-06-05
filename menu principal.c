@@ -11,30 +11,29 @@
 
 void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunta y se almacena la info en la estructura
     printf("\n Introduce tu nombre");
-    getchar();
-    fgets(u[numero_de_usuarios].nombre,20,stdin);
+    scanf("%s",u[numero_de_usuarios].nombre);
 
     printf("\n Introduce tu nombre de usuario");
-    fgets(u[numero_de_usuarios].usuario,20,stdin);
+    scanf("%s",u[numero_de_usuarios].usuario);
 
     printf("\n Introduce tu contrasena");
-    fgets(u[numero_de_usuarios].contrasena,20,stdin);    //FALTA TRATAR LOS ERRORES(poner una letra en la edad, requisitos contras y eso)
+    scanf("%s",u[numero_de_usuarios].contrasena);    //FALTA TRATAR LOS ERRORES(poner una letra en la edad, requisitos contras y eso)
 
     printf("\nIntroduce tu edad");
     scanf("%d",&u[numero_de_usuarios].edad);
 
     printf("\nIntroduce tu email");
     getchar();
-    fgets(u[numero_de_usuarios].email,20,stdin);
+    scanf("%s",u[numero_de_usuarios].email);
 
     printf("\nDe donde eres?");
-    fgets(u[numero_de_usuarios].ubicacion,20,stdin);
+    scanf("%s",u[numero_de_usuarios].ubicacion);
 
     printf("\nCuales son tus 5 platos favoritos? Introducelos separados por una coma");
-    gets(u[numero_de_usuarios].platos_favoritos);
+    scanf("%s",u[numero_de_usuarios].platos_favoritos);
     printf("\n El usuario %s se ha registrado correctamente!",u[numero_de_usuarios].usuario);
 
-    //printf("\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
+    printf("\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
     //esto es para imprimir los datos recolectados, por si hay algun error y necesitamos mirar si los recolecta bien
 };
 
@@ -49,7 +48,7 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunt
  */
 void menu_principal(Usuario u[]) {
     FILE *fichero;
-    char filename[] = "courses.txt";
+    char filename[] = "usuarios.txt";
     fichero = fopen(filename, "r");
     if (fichero == NULL) {
         printf("Error opening file %s\n", filename);
@@ -93,25 +92,24 @@ void menu_principal(Usuario u[]) {
             else{
                 char usuario_buscado[20];
                 printf("\nIntroduce el nombre de usuario: ");//el usuario introduce el nombre de usuario a buscar
-                getchar();
-                fgets(usuario_buscado, 20, stdin);
+                scanf("%s",usuario_buscado);
 
-                int indice_usuario = busqueda_secuencial(lista_de_usuarios, numero_de_usuarios, usuario_buscado);
-                printf("%d",indice_usuario);
+                int indice_usuario = busqueda_secuencial(lista_de_usuarios, numero_de_usuarios, usuario_buscado); //esto devuelve la posicion de la lista
+                //donde está el usuario
 
-                if (indice_usuario != -1) {
+                if (indice_usuario != -1) { //si es -1, quiere decir que no está
                     printf("\nUsuario encontrado: %s", u[indice_usuario].usuario);
                     char contra[20];
-                    printf("Introduce la contrasena");
-                    fgets(contra,20,stdin);
-                    if(iniciar_sesion(&u,contra,indice_usuario)!=1){
-                        printf("Contrasena incorrecta, introducela de nuevo");
-                        fgets(contra,20,stdin);
+                    printf("Introduce la contrasena"); //pedimos por la contraseña
+                    scanf("%s",contra);
+                    while(iniciar_sesion(u,contra,indice_usuario)!=1){ //si la función para verificar la contra no devuelve 1, la contra es incorrecta
+                        printf("Contrasena incorrecta, introducela de nuevo\n");
+                        scanf("%s",contra);
                     }
-                    if((iniciar_sesion(&u,contra,indice_usuario)==1)){
-                        printf("Bienvenido,%s",&u[indice_usuario].usuario);
+                    if((iniciar_sesion(u,contra,indice_usuario)==1)){
+                        printf("Bienvenido/a,%s!\n",u[indice_usuario].usuario);//una vez validada la contraseña damos la bienvenida
                     }
-                    submenu(u,indice_usuario);
+                    submenu(u,indice_usuario); //imprimimos el submenu de usuario
                 } else {
                     printf("\nUsuario no encontrado.");
                 }
@@ -125,5 +123,11 @@ void menu_principal(Usuario u[]) {
         }
         else{
             printf("\nSelecciona una opcion valida");
+            printf("\n 1. Registarse");
+            printf("\n 2. Registrar usuarios.txt desde un fichero");
+            printf("\n 3. Lista de Usuarios registrados");
+            printf("\n 4. Iniciar sesion");
+            printf("\n 5.Salir de la aplicacion");
+            scanf("%d", &opcion);
         }
     }

@@ -1,6 +1,6 @@
 CMakeFiles/EDA2.dir/OPCION_3.c.obj: \
- C:\Users\marti\CLionProjects\EDA2\OPCION\ 3.c \
- C:\Users\marti\CLionProjects\EDA2\estructuras.h \
+ C:\Users\marti\CLionProjects\EDA2BUENO2\OPCION\ 3.c \
+ C:\Users\marti\CLionProjects\EDA2BUENO2\estructuras.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \

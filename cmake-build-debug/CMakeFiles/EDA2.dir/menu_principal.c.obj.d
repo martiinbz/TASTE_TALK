@@ -1,5 +1,5 @@
 CMakeFiles/EDA2.dir/menu_principal.c.obj: \
- C:\Users\marti\CLionProjects\EDA2\menu\ principal.c \
+ C:\Users\marti\CLionProjects\EDA2BUENO2\menu\ principal.c \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/stdio.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/corecrt.h \
@@ -23,4 +23,4 @@ CMakeFiles/EDA2.dir/menu_principal.c.obj: \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/string.h \
  E:/CLion\ 2022.3.1/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:\Users\marti\CLionProjects\EDA2\estructuras.h
+ C:\Users\marti\CLionProjects\EDA2BUENO2\estructuras.h

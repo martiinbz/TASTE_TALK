@@ -10,8 +10,8 @@ int busqueda_secuencial(char **lista_de_usuarios, int numero_de_usuarios, char *
     }
     return -1;
 }
-int iniciar_sesion(Usuario *u[],char *contrasena,int posicion){
-    if(strcmp(contrasena,u[posicion]->contrasena)==0){
+int iniciar_sesion(Usuario u[],char *contrasena,int posicion){
+    if(strcmp(contrasena,u[posicion].contrasena)==0){
         return 1;
     }
     else return 0;

@@ -22,7 +22,6 @@ void enviar_solicitud(Usuario u[]){   //funcion que usaremos para enviar solicit
 
 void submenu(Usuario u[],int indice_usuario) {
     int sub_opcion = 0;
-    printf("\nBienvenido %s", u[indice_usuario].usuario);
     printf("\nElige que quieres hacer:");
     while (sub_opcion != 4) {
         printf("\n 1. Enviar solicitudes");

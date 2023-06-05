@@ -54,6 +54,6 @@ void print_stack(struct stack *stack);
 void  init_pila(struct stack*pila);
 void menu_principal(Usuario u[]);
 int busqueda_secuencial(char **lista_de_usuarios, int numero_de_usuarios, char *usuario_buscado);
-int iniciar_sesion(Usuario *u[],char *contrasena,int posicion);
+int iniciar_sesion(Usuario u[],char *contrasena,int posicion);
 void submenu(Usuario u[],int indice_usuario);
 
