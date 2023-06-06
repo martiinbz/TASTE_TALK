@@ -42,7 +42,7 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
              manageFriendRequests(indice_usuario,u);
         }
         if(sub_opcion==3){
-            realizar_publicacion(u);
+            realizar_publicacion(u,indice_usuario);
         }
         if(sub_opcion==4){
             verPublicacionesPropias(u, indice_usuario);

@@ -68,7 +68,7 @@ void revisar_solicitudes_amistad(Usuario *u,int indice_usuario);
 void mostrar_solicitudes_recibidas(Usuario *u, int indice_usuario);
 void sendFriendRequest(int senderId, int receiverId);
 void manageFriendRequests(int userId,Usuario u[]);
-void realizar_publicacion(Usuario *usuario);
+void realizar_publicacion(Usuario usuario[],int indice_usuario);
 void verPublicacionesPropias(Usuario u[], int indice_usuario);
 
 

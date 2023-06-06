@@ -5,7 +5,7 @@
 
 
 
-void realizar_publicacion(Usuario *usuario) {
+void realizar_publicacion(Usuario usuario[],int indice_usuario) {
     if (usuario->num_publicaciones >= MAX_PUBLICACIONES) {
         printf("Error: Has alcanzado el límite de publicaciones.\n");
         return;
@@ -15,8 +15,8 @@ void realizar_publicacion(Usuario *usuario) {
     printf("Introduce el texto de la publicación (hasta 120 caracteres): ");
     scanf(" %[^\n]", texto);
 
-    strcpy(usuario->publicaciones[usuario->num_publicaciones].texto, texto);
-    usuario->num_publicaciones++;
+    strcpy(usuario[indice_usuario].publicaciones[usuario->num_publicaciones].texto, texto);
+    usuario[indice_usuario].num_publicaciones++;
 
     printf("Publicación realizada correctamente.\n");
 }
