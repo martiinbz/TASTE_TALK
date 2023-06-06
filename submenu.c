@@ -20,7 +20,7 @@ void enviar_solicitud(Usuario u[]){   //funcion que usaremos para enviar solicit
 }
 
 
-void submenu(Usuario u[],int indice_usuario) {
+void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_de_usuarios) {
     int sub_opcion = 0;
     printf("\nElige que quieres hacer:");
     while (sub_opcion != 4) {
@@ -30,7 +30,13 @@ void submenu(Usuario u[],int indice_usuario) {
         printf("\n 4. Volcer al menu principal");
         scanf("%d", &sub_opcion);
         if(sub_opcion==1){
-            //enviar_solicitud(Usuario u[]);
+            char nombre_receptor[20];
+            printf("Introduce el usuario de destino");
+            scanf("%s",nombre_receptor);
+            enviar_solicitud_amistad( lista_de_usuarios, u, indice_usuario,  numero_de_usuarios,nombre_receptor);
+        }
+        if(sub_opcion==2){
+             revisar_solicitudes_amistad( u, indice_usuario);
         }
     }
 }

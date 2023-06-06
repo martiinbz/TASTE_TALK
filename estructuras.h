@@ -33,16 +33,16 @@ struct stack {
     char usuario[20];
     char nombre[50];
     char email[50];
-    char edad[2];
+    int edad[2];
     int num_amigos;
     int amigos[MAX_AMIGOS];
     int num_publicaciones;
-    int solicitudes_amistad[MAX_SOLICITUDES];
     int num_solicitudes;
     char publicaciones[MAX_PUBLICACIONES][500];
     char platos_favoritos[500];
     char ubicacion[500];
     char contrasena[20];
+    struct SolicitudAmistad *solicitudes;
 } Usuario;
 
 
@@ -55,5 +55,9 @@ void  init_pila(struct stack*pila);
 void menu_principal(Usuario u[]);
 int busqueda_secuencial(char **lista_de_usuarios, int numero_de_usuarios, char *usuario_buscado);
 int iniciar_sesion(Usuario u[],char *contrasena,int posicion);
-void submenu(Usuario u[],int indice_usuario);
+void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_de_usuarios);
+void enviar_solicitud_amistad(char **lista_de_usuarios,Usuario *u,int indice_usuarios, int numero_de_usuarios,  char *nombre_receptor);
+void revisar_solicitudes_amistad(Usuario *u,int indice_usuario);
+void mostrar_solicitudes_recibidas(Usuario *u, int indice_usuario);
+
 

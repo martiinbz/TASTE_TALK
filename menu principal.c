@@ -109,7 +109,7 @@ void menu_principal(Usuario u[]) {
                     if((iniciar_sesion(u,contra,indice_usuario)==1)){
                         printf("Bienvenido/a,%s!\n",u[indice_usuario].usuario);//una vez validada la contraseña damos la bienvenida
                     }
-                    submenu(u,indice_usuario); //imprimimos el submenu de usuario
+                   submenu( lista_de_usuarios, u, indice_usuario, numero_de_usuarios);//imprimimos el submenu de usuario
                 } else {
                     printf("\nUsuario no encontrado.");
                 }
