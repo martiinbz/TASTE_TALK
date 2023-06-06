@@ -27,7 +27,12 @@ struct stack {
     int capacity;
     char username[20][20];
 };
-
+//***ESTRUCTURA DE LA COLA PARA MANEJAR SOLICITUDES***//
+typedef struct {
+    int senderId;
+    int receiverId;
+} FriendRequest;
+//**ESTRUCTURA PARA LAS PUBLICACIONES**//
 typedef struct {
     char texto[121]; // 120 caracteres para el texto de la publicación + 1 para el carácter nulo
 } Publicacion;
@@ -39,15 +44,11 @@ typedef struct {
     char nombre[50];
     char email[50];
     int edad[2];
-    int num_amigos;
-    int amigos[MAX_AMIGOS];
     Publicacion publicaciones[MAX_PUBLICACIONES];
     int num_publicaciones;
-    int num_solicitudes;
     char platos_favoritos[500];
     char ubicacion[500];
     char contrasena[20];
-    struct SolicitudAmistad *solicitudes;
      int receivedFriendRequests[50]; // IDs de las solicitudes de amistad recibidas
      int numReceivedFriendRequests; // Número de solicitudes de amistad recibidas
 } Usuario;
