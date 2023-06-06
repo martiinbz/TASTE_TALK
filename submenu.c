@@ -26,8 +26,8 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
     while (sub_opcion != 4) {
         printf("\n 1. Enviar solicitudes");
         printf("\n 2. Revisar solicitudes");
-        printf("\n 3. Visitar perfil");
-        printf("\n 4. Volver al menu principal");
+        printf("\n 3. Realizar una publicacion");
+        printf("\n 4. Observar las publicaciones");
         scanf("%d", &sub_opcion);
         if(sub_opcion==1){
             char nombre_receptor[20];
@@ -40,6 +40,12 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
         if(sub_opcion==2){
              //revisar_solicitudes_amistad( u, indice_usuario);
              manageFriendRequests(indice_usuario,u);
+        }
+        if(sub_opcion==3){
+            realizar_publicacion(u);
+        }
+        if(sub_opcion==4){
+            verPublicacionesPropias(u, indice_usuario);
         }
     }
 }

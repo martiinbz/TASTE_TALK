@@ -27,6 +27,11 @@ struct stack {
     int capacity;
     char username[20][20];
 };
+
+typedef struct {
+    char texto[121]; // 120 caracteres para el texto de la publicación + 1 para el carácter nulo
+} Publicacion;
+
 //****ESTRUCTURA PARA LA INFORMACIÓN DE LOS USUARIOS****
  typedef struct {
     int *id;
@@ -36,9 +41,9 @@ struct stack {
     int edad[2];
     int num_amigos;
     int amigos[MAX_AMIGOS];
+    Publicacion publicaciones[MAX_PUBLICACIONES];
     int num_publicaciones;
     int num_solicitudes;
-    char publicaciones[MAX_PUBLICACIONES][500];
     char platos_favoritos[500];
     char ubicacion[500];
     char contrasena[20];
@@ -63,5 +68,8 @@ void revisar_solicitudes_amistad(Usuario *u,int indice_usuario);
 void mostrar_solicitudes_recibidas(Usuario *u, int indice_usuario);
 void sendFriendRequest(int senderId, int receiverId);
 void manageFriendRequests(int userId,Usuario u[]);
+void realizar_publicacion(Usuario *usuario);
+void verPublicacionesPropias(Usuario u[], int indice_usuario);
+
 
 

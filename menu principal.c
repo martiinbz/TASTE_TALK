@@ -5,11 +5,40 @@
 
 
 
+void realizar_publicacion(Usuario *usuario) {
+    if (usuario->num_publicaciones >= MAX_PUBLICACIONES) {
+        printf("Error: Has alcanzado el límite de publicaciones.\n");
+        return;
+    }
+
+    char texto[121];
+    printf("Introduce el texto de la publicación (hasta 120 caracteres): ");
+    scanf(" %[^\n]", texto);
+
+    strcpy(usuario->publicaciones[usuario->num_publicaciones].texto, texto);
+    usuario->num_publicaciones++;
+
+    printf("Publicación realizada correctamente.\n");
+}
+
+void verPublicacionesPropias(Usuario u[], int indice_usuario) {
+    if (u[indice_usuario].num_publicaciones == 0) {
+        printf("No tienes publicaciones.\n");
+        return;
+    }
+
+    printf("Tus publicaciones:\n");
+    for (int i = 0; i < u[indice_usuario].num_publicaciones; i++) {
+        printf("%s\n", u[indice_usuario].publicaciones[i]);
+    }
+}
 
 
 // Función para el submenú del usuario
 
 void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunta y se almacena la info en la estructura
+
+    u[numero_de_usuarios].num_publicaciones = 0;
     printf("\n Introduce tu nombre");
     scanf("%s",u[numero_de_usuarios].nombre);
 
