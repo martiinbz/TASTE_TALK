@@ -33,10 +33,13 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
             char nombre_receptor[20];
             printf("Introduce el usuario de destino");
             scanf("%s",nombre_receptor);
-            enviar_solicitud_amistad( lista_de_usuarios, u, indice_usuario,  numero_de_usuarios,nombre_receptor);
+           // enviar_solicitud_amistad( lista_de_usuarios, u, indice_usuario,  numero_de_usuarios,nombre_receptor);
+           int indice_receptor= busqueda_secuencial(lista_de_usuarios,numero_de_usuarios,nombre_receptor);
+            sendFriendRequest( indice_usuario,  indice_receptor);
         }
         if(sub_opcion==2){
-             revisar_solicitudes_amistad( u, indice_usuario);
+             //revisar_solicitudes_amistad( u, indice_usuario);
+             manageFriendRequests(indice_usuario,u);
         }
     }
 }

@@ -43,6 +43,8 @@ struct stack {
     char ubicacion[500];
     char contrasena[20];
     struct SolicitudAmistad *solicitudes;
+     int receivedFriendRequests[50]; // IDs de las solicitudes de amistad recibidas
+     int numReceivedFriendRequests; // Número de solicitudes de amistad recibidas
 } Usuario;
 
 
@@ -59,5 +61,7 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
 void enviar_solicitud_amistad(char **lista_de_usuarios,Usuario *u,int indice_usuarios, int numero_de_usuarios,  char *nombre_receptor);
 void revisar_solicitudes_amistad(Usuario *u,int indice_usuario);
 void mostrar_solicitudes_recibidas(Usuario *u, int indice_usuario);
+void sendFriendRequest(int senderId, int receiverId);
+void manageFriendRequests(int userId,Usuario u[]);
 
 
