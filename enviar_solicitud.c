@@ -40,7 +40,7 @@ void enviar_solicitud_amistad(char **lista_de_usuarios, Usuario *u, int indice_u
     emisor = &u[indice_usuarios];
     receptor = &u[indice_receptor];
 
-    agregar_solicitud(emisor, receptor, &emisor->solicitudes);
+    agregar_solicitud(emisor, receptor, &receptor->solicitudes);
 }
 
 

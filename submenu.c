@@ -27,7 +27,7 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
         printf("\n 1. Enviar solicitudes");
         printf("\n 2. Revisar solicitudes");
         printf("\n 3. Visitar perfil");
-        printf("\n 4. Volcer al menu principal");
+        printf("\n 4. Volver al menu principal");
         scanf("%d", &sub_opcion);
         if(sub_opcion==1){
             char nombre_receptor[20];

@@ -100,10 +100,10 @@ void menu_principal(Usuario u[]) {
                 if (indice_usuario != -1) { //si es -1, quiere decir que no está
                     printf("\nUsuario encontrado: %s", u[indice_usuario].usuario);
                     char contra[20];
-                    printf("Introduce la contrasena"); //pedimos por la contraseña
+                    printf("\nIntroduce la contrasena"); //pedimos por la contraseña
                     scanf("%s",contra);
                     while(iniciar_sesion(u,contra,indice_usuario)!=1){ //si la función para verificar la contra no devuelve 1, la contra es incorrecta
-                        printf("Contrasena incorrecta, introducela de nuevo\n");
+                        printf("\nContrasena incorrecta, introducela de nuevo\n");
                         scanf("%s",contra);
                     }
                     if((iniciar_sesion(u,contra,indice_usuario)==1)){

@@ -20,7 +20,7 @@
 #define MAX_AMIGOS 100
 #define MAX_SOLICITUDES 100
 #define MAX_PUBLICACIONES 100
-
+#define BARS "*****************************************************************************"
 //***ESTRUCTURA DE LA PILA DINÁMICA***
 struct stack {
     int top;
