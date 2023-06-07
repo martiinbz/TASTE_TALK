@@ -59,6 +59,10 @@ void imprimirPalabrasMasUsadas(ConteoPalabras* conteo, int numPalabras) {
     // Imprimir las 10 palabras más usadas palabras más usadas
     printf("Las 10 palabras mas usadas en la aplicacion son:\n");
     for (i = 0; i < 10; i++) {
+        if(conteo[i].conteo==0){
+            printf("\nNadie ha publicado aun!\n"); //en el caso de que no haya ninguna palabra publicada
+            break;
+        }
         printf("%s : %d\n", conteo[i].palabra, conteo[i].conteo);
     }
 }

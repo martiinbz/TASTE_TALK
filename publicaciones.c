@@ -27,7 +27,7 @@ void verPublicacionesPropias(Usuario u[], int indice_usuario) {
     printf("\n=============================");
     printf("\nTus publicaciones:\n");
     for (int i = 0; i < u[indice_usuario].num_publicaciones; i++) {
-        printf("%s\n", u[indice_usuario].publicaciones[i].texto);
+        printf("\n%s\n", u[indice_usuario].publicaciones[i].texto);
         printf("---------------------------------\n");
     }
 }
