@@ -68,12 +68,19 @@ void manageFriendRequests(int userId,Usuario u[]) {
 
         // Obtener la decisión del usuario
         char decision[10];
-        printf("¿Aceptar la solicitud? (si/no): ");
+        printf("¿Aceptar la solicitud? (si/no): \t\n");
         scanf("%s", decision);
 
         // Gestionar la solicitud según la decisión del usuario
         if (strcmp(decision, "si") == 0) {
-            printf("Solicitud aceptada. Ahora eres amigo de Usuario %s.\n", users[request.senderId].usuario);
+            printf("Solicitud aceptada. Ahora eres amigo de Usuario %s.\n", u[request.senderId].usuario);
+            strcpy(u[request.receiverId].nombre_amigos[u[request.receiverId].num_amigos].nombre_amigo,
+                   u[request.senderId].usuario);
+            strcpy(u[request.senderId].nombre_amigos[u[request.senderId].num_amigos].nombre_amigo,
+                   u[request.receiverId].usuario);
+            u[request.receiverId].num_amigos++;
+            u[request.senderId].num_amigos++;
+
             // Aquí puedes realizar acciones adicionales, como agregar el ID del usuario a la lista de amigos, etc.
         } else if (strcmp(decision, "no") == 0) {
             printf("Solicitud rechazada.\n");
@@ -95,3 +102,16 @@ void manageFriendRequests(int userId,Usuario u[]) {
         i--;
     }
 }
+void imprimir_lista_amigos(int userId, Usuario u[]) {
+    printf("\nLista de amigos de Usuario %s:\n", u[userId].usuario);
+
+    if (u[userId].num_amigos == 0) {
+        printf("No tienes amigos en tu lista.\n");
+        return;
+    }
+
+    for (int i = 0; i < u[userId].num_amigos; i++) {
+        printf("\t%d. %s\n", i + 1, u[userId].nombre_amigos[i].nombre_amigo);
+    }
+}
+

@@ -37,6 +37,10 @@ typedef struct {
     char texto[121]; // 120 caracteres para el texto de la publicación + 1 para el carácter nulo
 } Publicacion;
 
+//***ESTRUCTURA PARA LOS AMIGOS***//
+typedef struct{
+    char nombre_amigo[20]
+}Amigos;
 //****ESTRUCTURA PARA LA INFORMACIÓN DE LOS USUARIOS****
  typedef struct {
     int *id;
@@ -49,8 +53,10 @@ typedef struct {
     char platos_favoritos[500];
     char ubicacion[500];
     char contrasena[20];
-     int receivedFriendRequests[50]; // IDs de las solicitudes de amistad recibidas
-     int numReceivedFriendRequests; // Número de solicitudes de amistad recibidas
+    int num_amigos;
+    Amigos nombre_amigos[20];
+    int receivedFriendRequests[50]; // IDs de las solicitudes de amistad recibidas
+    int numReceivedFriendRequests; // Número de solicitudes de amistad recibidas
 } Usuario;
  ///ESTRUCTURA PARA CONTAR LAS PALABRAS///
 typedef struct {
@@ -77,5 +83,6 @@ void realizar_publicacion(Usuario usuario[],int indice_usuario);
 void verPublicacionesPropias(Usuario u[], int indice_usuario);
 void contarPalabras(Usuario* u, int numero_de_usuario, ConteoPalabras* conteo, int* numPalabras);
 void imprimirPalabrasMasUsadas(ConteoPalabras* conteo, int numPalabras);
-
+void imprimir_lista_amigos(int userId, Usuario u[]);
+void ver_perfil(Usuario u[],int indice_usuario);
 

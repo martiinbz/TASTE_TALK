@@ -21,7 +21,7 @@ void realizar_publicacion(Usuario u[],int indice_usuario) {
 void verPublicacionesPropias(Usuario u[], int indice_usuario) {
     printf("%d",u[indice_usuario].num_publicaciones);
     if (u[indice_usuario].num_publicaciones == 0) {
-        printf("No tienes publicaciones.\n");
+        printf("No hay publicaciones.\n");
         return;
     }
     printf("\n=============================");

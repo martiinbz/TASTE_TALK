@@ -16,3 +16,13 @@ int iniciar_sesion(Usuario u[],char *contrasena,int posicion){
     }
     else return 0;
 }
+void ver_perfil(Usuario u[],int indice_usuario){
+    printf("\n=============================");
+    printf("\n %s\n",u[indice_usuario].usuario);
+    printf("=============================\n");
+    printf("\nNombre: %s\t Edad:%d\t Ubicacion:%s \t Plato favorito:%s\n",u[indice_usuario].nombre,*u[indice_usuario].edad,u[indice_usuario].ubicacion,u[indice_usuario].platos_favoritos);
+    printf("---------Amigos---------\n");
+    imprimir_lista_amigos(indice_usuario,u);
+    printf("---------Publicaciones---------\n");
+    verPublicacionesPropias(u,indice_usuario);
+}

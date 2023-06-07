@@ -30,10 +30,24 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
             realizar_publicacion(u, indice_usuario);
         }
         if (sub_opcion == 4) {
-            verPublicacionesPropias(u,indice_usuario);
+            ver_perfil( u, indice_usuario);
         }
         if(sub_opcion==5){
-            printf("Buscar usuario");
+            char usuario_a_buscar[20];
+            printf("Introduce el usuario a buscar(debe de ser tu amigo):");
+            scanf("%s",usuario_a_buscar);
+            int indice_usuario_a_buscar=busqueda_secuencial(lista_de_usuarios, numero_de_usuarios, usuario_a_buscar);
+            if(indice_usuario_a_buscar==-1){
+                printf("No se ha encontrado al usuario");
+            }
+            for(int i=0;i<u[indice_usuario].num_amigos;i++){
+                if(strcmp(u[indice_usuario_a_buscar].usuario,u[indice_usuario].nombre_amigos[i].nombre_amigo)==0){
+                    ver_perfil( u, indice_usuario_a_buscar);
+                }
+            }
+            printf("El usuario no se encuentra en tu lista de amigos");
+
+
         }
         if(sub_opcion==6){
             printf("\n Cerrando sesion...");
