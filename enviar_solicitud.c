@@ -103,7 +103,7 @@ void imprimir_lista_amigos(int userId, Usuario u[]) { //funcion que imprime la l
     printf("\nLista de amigos de Usuario %s:\n", u[userId].usuario);
 
     if (u[userId].num_amigos == 0) {
-        printf("No tienes amigos en tu lista.\n");
+        printf("\nNo tienes amigos en tu lista.\n");
         return;
     }
 
