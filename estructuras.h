@@ -52,7 +52,11 @@ typedef struct {
      int receivedFriendRequests[50]; // IDs de las solicitudes de amistad recibidas
      int numReceivedFriendRequests; // Número de solicitudes de amistad recibidas
 } Usuario;
-
+ ///ESTRUCTURA PARA CONTAR LAS PALABRAS///
+typedef struct {
+    char palabra[100];
+    int conteo;
+} ConteoPalabras;
 
 // Funciones para manejar la red social
 void recopilar_datos(Usuario u[], int numero_de_usuarios);
@@ -71,6 +75,7 @@ void sendFriendRequest(int senderId, int receiverId);
 void manageFriendRequests(int userId,Usuario u[]);
 void realizar_publicacion(Usuario usuario[],int indice_usuario);
 void verPublicacionesPropias(Usuario u[], int indice_usuario);
-
+void contarPalabras(Usuario* u, int numero_de_usuario, ConteoPalabras* conteo, int* numPalabras);
+void imprimirPalabrasMasUsadas(ConteoPalabras* conteo, int numPalabras);
 
 

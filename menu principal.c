@@ -130,9 +130,13 @@ void menu_principal(Usuario u[]) {
 
         }
         if (opcion == 5) {
+
+
+        }
+        if (opcion==6){
             printf("\nGracias por usar nuestra aplicacion!\n Hecha por:\n Martin Barcena \n Arnau Gil \n Adria Casals");
             break;
-
         }
 
     }
+}
