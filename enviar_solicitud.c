@@ -23,8 +23,6 @@ FriendRequest friendRequests[MAX_FRIEND_REQUESTS];
 int numFriendRequests = 0;
 
 void sendFriendRequest(int senderId, int receiverId) {
-    // Verificar que los IDs de los usuarios sean válidos
-
 
     // Verificar si ya hay una solicitud pendiente entre los usuarios
     for (int i = 0; i < numFriendRequests; i++) {
@@ -34,9 +32,9 @@ void sendFriendRequest(int senderId, int receiverId) {
         }
     }
 
-    // Agregar la solicitud al usuario receptor
+    // Si no,agregamos la solicitud al usuario receptor
     users[receiverId].receivedFriendRequests[users[receiverId].numReceivedFriendRequests] = numFriendRequests;
-    users[receiverId].numReceivedFriendRequests++;
+    users[receiverId].numReceivedFriendRequests++; //incrementamos el numero de solicitudes recibidas
 
     // Crear una nueva solicitud de amistad
     FriendRequest newRequest;
@@ -74,22 +72,21 @@ void manageFriendRequests(int userId,Usuario u[]) {
         // Gestionar la solicitud según la decisión del usuario
         if (strcmp(decision, "si") == 0) {
             printf("Solicitud aceptada. Ahora eres amigo de Usuario %s.\n", u[request.senderId].usuario);
-            strcpy(u[request.receiverId].nombre_amigos[u[request.receiverId].num_amigos].nombre_amigo,
+            strcpy(u[request.receiverId].nombre_amigos[u[request.receiverId].num_amigos].nombre_amigo, //añadimos al emisor a la lista de amigos del receptor
                    u[request.senderId].usuario);
-            strcpy(u[request.senderId].nombre_amigos[u[request.senderId].num_amigos].nombre_amigo,
+            strcpy(u[request.senderId].nombre_amigos[u[request.senderId].num_amigos].nombre_amigo, //añadimos al receptro a la lista de amigos del emisor
                    u[request.receiverId].usuario);
-            u[request.receiverId].num_amigos++;
+            u[request.receiverId].num_amigos++; //incrementamos el numero de amigos de ambos
             u[request.senderId].num_amigos++;
 
-            // Aquí puedes realizar acciones adicionales, como agregar el ID del usuario a la lista de amigos, etc.
         } else if (strcmp(decision, "no") == 0) {
-            printf("Solicitud rechazada.\n");
+            printf("Solicitud rechazada.\n"); //si la rechaza, no hacemos nada
         } else {
             printf("Opción inválida. La solicitud se mantendrá pendiente.\n");
             continue; // Saltar a la siguiente solicitud
         }
 
-        // Eliminar la solicitud gestionada
+        // Eliminar la solicitud gestionada, da igual si ha sido aceptada o rechazada
         for (int j = requestId; j < numFriendRequests - 1; j++) {
             friendRequests[j] = friendRequests[j + 1];
         }
@@ -102,7 +99,7 @@ void manageFriendRequests(int userId,Usuario u[]) {
         i--;
     }
 }
-void imprimir_lista_amigos(int userId, Usuario u[]) {
+void imprimir_lista_amigos(int userId, Usuario u[]) { //funcion que imprime la lista de amigos de un usuario especifico (si tiene).
     printf("\nLista de amigos de Usuario %s:\n", u[userId].usuario);
 
     if (u[userId].num_amigos == 0) {

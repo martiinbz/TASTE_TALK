@@ -23,8 +23,7 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
             sendFriendRequest(indice_usuario, indice_receptor);
         }
         if (sub_opcion == 2) {
-            //revisar_solicitudes_amistad( u, indice_usuario);
-            manageFriendRequests(indice_usuario, u);
+            manageFriendRequests(indice_usuario, u); //se gestiona las solicitudes del usuario
         }
         if (sub_opcion == 3) {
             realizar_publicacion(u, indice_usuario);
@@ -35,15 +34,15 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
         if(sub_opcion==5){
             char usuario_a_buscar[20];
             int encontrado=0;
-            printf("Introduce el usuario a buscar(debe de ser tu amigo):");
+            printf("Introduce el usuario a buscar(debe de ser tu amigo):"); //el usuario introduce el nombre de su amigo que quiere buscar
             scanf("%s",usuario_a_buscar);
-            int indice_usuario_a_buscar=busqueda_secuencial(lista_de_usuarios, numero_de_usuarios, usuario_a_buscar);
+            int indice_usuario_a_buscar=busqueda_secuencial(lista_de_usuarios, numero_de_usuarios, usuario_a_buscar); //obtenemos la id del amigo
             if(indice_usuario_a_buscar==-1){
                 printf("No se ha encontrado al usuario");
             }
-            for(int i=0;i<u[indice_usuario].num_amigos;i++){
+            for(int i=0;i<u[indice_usuario].num_amigos;i++){ //vamos comparando el nombre del amigo con la lista de amigos del usuario
                 if(strcmp(u[indice_usuario_a_buscar].usuario,u[indice_usuario].nombre_amigos[i].nombre_amigo)==0){
-                    ver_perfil( u, indice_usuario_a_buscar);
+                    ver_perfil( u, indice_usuario_a_buscar); //si se encuentra en la lista, accedemos a su perfil
                     encontrado++;
                 }
             }
@@ -54,7 +53,7 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
 
         }
         if(sub_opcion==6){
-            printf("\n Cerrando sesion...");
+            printf("\n Cerrando sesion..."); //se vuelve al menu principal
             break;
         }
     }

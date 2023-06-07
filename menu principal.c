@@ -50,11 +50,11 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunt
 void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide al usuario que ingrese una opción según lo que quiera hacer. cada opción lleva a una función diferente.
    int numero_de_palabras;
     struct ConteoPalabras *conteo[1000];
-    FILE *fichero;
+    FILE *fichero; //esto abre el .txt que contiene la informacion de los usuarios
     char filename[] = "usuarios.txt";
     fichero = fopen(filename, "r");
     if (fichero == NULL) {
-        printf("Error opening file %s\n", filename);
+        printf("Error opening file %s\n", filename); //en caso de que de error al abrir
     }
     int opcion = 0, numero_de_usuarios = 0;
     char **lista_de_usuarios;
@@ -66,7 +66,7 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
     while (opcion != -1) {
         printf("\n Selecciona una opcion valida:");
         printf("\n\t 1. Registarse");
-        printf("\n\t 2. Registrar usuarios.txt desde un fichero");
+        printf("\n\t 2. Registrar usuarios desde un fichero");
         printf("\n\t 3. Lista de Usuarios registrados");
         printf("\n\t 4. Iniciar sesion");
         printf("\n\t 5. Salir de la aplicacion\n");
@@ -75,17 +75,17 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
         if (opcion == 1) {
             recopilar_datos(u, numero_de_usuarios); //preguntamos al usuario los datos necesarios
             lista_de_usuarios[numero_de_usuarios] = u[numero_de_usuarios].usuario; //metemos el nombre de usuario en la lista
-            numero_de_usuarios += 1; //incrementamos el contador de usuarios.txt
+            numero_de_usuarios += 1; //incrementamos el contador de usuarios  de la red social
             lista_de_usuarios = (char **) realloc(lista_de_usuarios, sizeof(char *) * (numero_de_usuarios +
                                                                                        1));//añadimos más memoria en caso de que se tenga que agregar un nuevo user.
 
         }
-        if (opcion == 2) {
+        if (opcion == 2) { //para registrar usuarios desde un fichero
             while (fscanf(fichero, "%s %s %d %s %s %s %s", u[numero_de_usuarios].nombre, u[numero_de_usuarios].usuario,
                           &u[numero_de_usuarios].edad, u[numero_de_usuarios].contrasena, u[numero_de_usuarios].email,
-                          u[numero_de_usuarios].ubicacion, u[numero_de_usuarios].platos_favoritos) > 0) {
+                          u[numero_de_usuarios].ubicacion, u[numero_de_usuarios].platos_favoritos) > 0) { //leemos los datos del fichero
                 lista_de_usuarios[numero_de_usuarios] = u[numero_de_usuarios].usuario; //metemos el nombre de usuario en la lista
-                numero_de_usuarios += 1; //incrementamos el contador de usuarios.txt
+                numero_de_usuarios += 1; //incrementamos el contador de usuarios
                 lista_de_usuarios = (char **) realloc(lista_de_usuarios, sizeof(char *) * (numero_de_usuarios +
                                                                                            1));//añadimos más memoria en caso de que se tenga que agregar un nuevo user.
             }
@@ -93,7 +93,7 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
         if (opcion == 3) {
             printf("\nHay %d usuarios registrados,son:\n", numero_de_usuarios);
             for (int i = 0; i <= (numero_de_usuarios - 1); i++) {
-                printf("%s\n", lista_de_usuarios[i]); //esto va imprimiendo la lista de ususarios
+                printf("%s\n", lista_de_usuarios[i]); //esto va imprimiendo la lista de usuarios
             }
         }
         if (opcion == 4) {
@@ -104,41 +104,39 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
                 printf("\nIntroduce el nombre de usuario: ");//el usuario introduce el nombre de usuario a buscar
                 scanf("%s", usuario_buscado);
 
-                int indice_usuario = busqueda_secuencial(lista_de_usuarios, numero_de_usuarios,
-                                                         usuario_buscado); //esto devuelve la posicion de la lista
+                int indice_usuario = busqueda_secuencial(lista_de_usuarios, numero_de_usuarios,usuario_buscado); //esto devuelve la posicion de la lista
                 //donde está el usuario
 
-                if (indice_usuario != -1) { //si es -1, quiere decir que no está
+                if (indice_usuario != -1) { //si es -1, quiere decir que no está en la lista
                     printf("\nUsuario encontrado: %s", u[indice_usuario].usuario);
                     char contra[20];
                     printf("\nIntroduce la contrasena"); //pedimos por la contraseña
                     scanf("%s", contra);
-                    while (iniciar_sesion(u, contra, indice_usuario) !=
-                           1) { //si la función para verificar la contra no devuelve 1, la contra es incorrecta
+                    while (iniciar_sesion(u, contra, indice_usuario) !=1) { //si la función para verificar la contra no devuelve 1, la contra es incorrecta
                         printf("\nContrasena incorrecta, introducela de nuevo\n");
                         scanf("%s", contra);
                     }
                     if ((iniciar_sesion(u, contra, indice_usuario) == 1)) {
                         printf("\n=============================\n");
                         printf("Bienvenido/a,%s!\n",
-                               u[indice_usuario].usuario);//una vez validada la contraseña damos la bienvenida
+                               u[indice_usuario].usuario);//una vez validada la contraseña,damos la bienvenida
                         printf("=============================\n");
                     }
                     submenu(lista_de_usuarios, u, indice_usuario, numero_de_usuarios);//imprimimos el submenu de usuario
                 } else {
-                    printf("\nUsuario no encontrado.");
+                    printf("\nUsuario no encontrado.");//en caso de que el usuario no esté registrado
                 }
             }
 
         }
-        if (opcion == 5) {
-            contarPalabras( u,  numero_de_usuarios, conteo, &numero_de_palabras);
+        if (opcion == 5) { //opcion para contar las palabras más usadas de la aplicacion e imprimirlas.
+            contarPalabras( u, numero_de_usuarios, conteo, &numero_de_palabras);
             imprimirPalabrasMasUsadas( conteo,  numero_de_palabras);
 
 
 
         }
-        if (opcion==6){
+        if (opcion==6){ //salir de la app.
             printf("\nGracias por usar nuestra aplicacion!\n Hecha por:\n Martin Barcena \n Arnau Gil \n Adria Casals");
             break;
         }
