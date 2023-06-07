@@ -4,6 +4,6 @@
 
 
 int main(){
-    Usuario u[30]; //de momento 20 es el maximo de usuarios.txt de la app
+    Usuario u[30]; //30 usuarios como maximo
     menu_principal(u);
 }
