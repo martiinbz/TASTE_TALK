@@ -34,6 +34,7 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
         }
         if(sub_opcion==5){
             char usuario_a_buscar[20];
+            int encontrado=0;
             printf("Introduce el usuario a buscar(debe de ser tu amigo):");
             scanf("%s",usuario_a_buscar);
             int indice_usuario_a_buscar=busqueda_secuencial(lista_de_usuarios, numero_de_usuarios, usuario_a_buscar);
@@ -43,9 +44,12 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
             for(int i=0;i<u[indice_usuario].num_amigos;i++){
                 if(strcmp(u[indice_usuario_a_buscar].usuario,u[indice_usuario].nombre_amigos[i].nombre_amigo)==0){
                     ver_perfil( u, indice_usuario_a_buscar);
+                    encontrado++;
                 }
             }
-            printf("El usuario no se encuentra en tu lista de amigos");
+            if(encontrado==0){
+                printf("El usuario no se encuentra en tu lista de amigos");
+            }
 
 
         }
