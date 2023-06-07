@@ -47,7 +47,9 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunt
     //esto es para imprimir los datos recolectados, por si hay algun error y necesitamos mirar si los recolecta bien
 };
 
-void menu_principal(Usuario u[]) {
+void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide al usuario que ingrese una opción según lo que quiera hacer. cada opción lleva a una función diferente.
+   int numero_de_palabras;
+    struct ConteoPalabras *conteo[1000];
     FILE *fichero;
     char filename[] = "usuarios.txt";
     fichero = fopen(filename, "r");
@@ -130,6 +132,9 @@ void menu_principal(Usuario u[]) {
 
         }
         if (opcion == 5) {
+            contarPalabras( u,  numero_de_usuarios, conteo, &numero_de_palabras);
+            imprimirPalabrasMasUsadas( conteo,  numero_de_palabras);
+
 
 
         }

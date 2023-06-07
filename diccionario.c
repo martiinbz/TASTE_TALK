@@ -16,23 +16,23 @@
 
 void contarPalabras(Usuario* u, int numero_de_usuario, ConteoPalabras* conteo, int* numPalabras) {
     *numPalabras = 0;
-    int i, j, k;
+    int i, j, k; //3 bucles, para iterar entre diferentes usuarios, entre diferentes publicaciones y dividir por palabras
     for (i = 0; i < numero_de_usuario; i++) {
-        Usuario usuario = u[i];
+        Usuario usuario = u[i];//se selecciona un usuario
         for (j = 0; j < MAX_PUBLICACIONES; j++) {
-            Publicacion publicacion = usuario.publicaciones[j];
-            char* token = strtok(publicacion.texto, " ");
+            Publicacion publicacion = usuario.publicaciones[j]; //se selecciona una publicacion suya
+            char* token = strtok(publicacion.texto, " ");//se separa en palabras
             while (token != NULL) {
-                // Verificar si la palabra ya existe en el conteo
+                // Verificar si la palabra ya existe en el diccionario
                 int palabraExistente = 0;
                 for (k = 0; k < *numPalabras; k++) {
                     if (strcmp(conteo[k].palabra, token) == 0) {
-                        conteo[k].conteo++;
+                        conteo[k].conteo++; //si ya está en el diccionario, se suma 1 al conteo de esa palabra
                         palabraExistente = 1;
                         break;
                     }
                 }
-                // Si la palabra no existe, se agrega al conteo
+                // Si la palabra no existe, se agrega al diccionario
                 if (!palabraExistente) {
                     strcpy(conteo[*numPalabras].palabra, token);
                     conteo[*numPalabras].conteo = 1;
@@ -45,7 +45,7 @@ void contarPalabras(Usuario* u, int numero_de_usuario, ConteoPalabras* conteo, i
 }
 
 void imprimirPalabrasMasUsadas(ConteoPalabras* conteo, int numPalabras) {
-    // Ordenar las palabras en orden descendente según el conteo
+    // Algoritmo BubbleSort para ordenar palabras en orden descendiente segun sus apariciones
     int i, j;
     for (i = 0; i < numPalabras - 1; i++) {
         for (j = 0; j < numPalabras - i - 1; j++) {
@@ -56,8 +56,9 @@ void imprimirPalabrasMasUsadas(ConteoPalabras* conteo, int numPalabras) {
             }
         }
     }
-    // Imprimir las palabras más usadas
-    for (i = 0; i < numPalabras; i++) {
+    // Imprimir las 10 palabras más usadas palabras más usadas
+    printf("Las 10 palabras mas usadas en la aplicacion son:\n");
+    for (i = 0; i < 10; i++) {
         printf("%s : %d\n", conteo[i].palabra, conteo[i].conteo);
     }
 }
