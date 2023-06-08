@@ -27,7 +27,7 @@ void submenu(char **lista_de_usuarios,Usuario u[],int indice_usuario,int numero_
             manageFriendRequests(indice_usuario, u); //se gestiona las solicitudes del usuario
         }
         if(sub_opcion==3){
-            findFriends( u,  numero_de_usuarios,  indice_usuario);
+            sugerencias_amistad( u,  numero_de_usuarios,  indice_usuario);
         }
         if (sub_opcion == 4) {
             realizar_publicacion(u, indice_usuario);

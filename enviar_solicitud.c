@@ -111,8 +111,8 @@ void imprimir_lista_amigos(int userId, Usuario u[]) { //funcion que imprime la l
         printf("\t%d. %s\n", i + 1, u[userId].nombre_amigos[i].nombre_amigo);
     }
 }
-
-void findFriends(Usuario u[], int numero_usuarios, int indice_usuario) {
+//funcion para encontrar sugerencias de amistad basada en los gustos
+void sugerencias_amistad(Usuario u[], int numero_usuarios, int indice_usuario) {
     char decision[10];
     printf("Buscando cocineros similares...\n");
     for (int i = 0; i < numero_usuarios; i++) {

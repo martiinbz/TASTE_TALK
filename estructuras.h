@@ -78,5 +78,5 @@ void contarPalabras(Usuario* u, int numero_de_usuario, ConteoPalabras* conteo, i
 void imprimirPalabrasMasUsadas(ConteoPalabras* conteo, int numPalabras);
 void imprimir_lista_amigos(int userId, Usuario u[]);
 void ver_perfil(Usuario u[],int indice_usuario);
-void findFriends(Usuario u[], int numero_usuarios, int indice_usuario);
+void sugerencias_amistad(Usuario u[], int numero_usuarios, int indice_usuario);
 
