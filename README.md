@@ -130,30 +130,22 @@ del código constantes.
     Ubicación: usuarios.txt y menu_prinicipal.c (lineas 104-109 del código)
 
 · Red social temática
-    La creación de una red social temática ha sido uno de nuestros principales objetivos, ya que buscábamos ofrecer a los usuarios una experiencia única y
-    especializada. Después de evaluar diversas ideas innovadoras, llegamos a la conclusión de que una red social de comida sería una opción fascinante y sin 
-    precedentes. Ninguno de los tres miembros del grupo había escuchado hablar antes de una propuesta similar, lo que nos motivó aún más a desarrollar esta idea.
-    Nuestra red social de comida está diseñada específicamente para que los usuarios puedan compartir sus recetas favoritas, así como los platos deliciosos que han 
-    disfrutado durante el día. Esto resuelve uno de los problemas comunes en muchos hogares: la falta de inspiración a la hora de decidir qué cocinar para las 
-    comidas o cenas. Con tan solo unos cuantos clics, nuestros usuarios tendrán acceso a un amplio abanico de ideas culinarias, lo que les permitirá disfrutar de 
-    deliciosas comidas sin tener que lidiar con la incertidumbre de qué preparar.
-    Además de compartir recetas, nuestra red social también ofrece una comunidad activa y amigable de amantes de la comida. Los usuarios podrán intercambiar 
-    consejos y trucos culinarios, e incluso participar en desafíos y concursos gastronómicos mediante las publicaciones. Esta interacción social en torno a la 
-    comida crea un ambiente acogedor donde los usuarios pueden conectarse, compartir experiencias y ampliar sus horizontes culinarios.
-    En resumen, nuestra red social temática de comida no solo resuelve el dilema diario de qué cocinar, sino que también fomenta una comunidad de apasionados por 
-    la gastronomía. Es un lugar donde la creatividad, la inspiración y el intercambio de ideas culinarias florecen. Conviértete en parte de nuestra red y descubre
-    un mundo de sabores y emocionantes descubrimientos culinarios. ¡La aventura gastronómica te espera!
-    Tiempo empleado: aproximadamente 20 minutos.
-    Ubicación: todo el código
+        La creación de una red social temática ha sido uno de nuestros principales objetivos, ya que buscábamos ofrecer a los usuarios una experiencia única y especializada. Después de evaluar diversas ideas innovadoras, llegamos a la conclusión de que una red social de comida sería una opción fascinante y sin precedentes. Ninguno de los tres miembros del grupo había escuchado hablar antes de una propuesta similar, lo que nos motivó aún más a desarrollar esta idea.
+        Nuestra red social de comida está diseñada específicamente para que los usuarios puedan compartir sus recetas favoritas, así como los platos deliciosos que han disfrutado durante el día. Esto resuelve uno de los problemas comunes en muchos hogares: la falta de inspiración a la hora de decidir qué cocinar para las comidas o cenas. Con tan solo unos cuantos clics, nuestros usuarios tendrán acceso a un amplio abanico de ideas culinarias, lo que les permitirá disfrutar de deliciosas comidas sin tener que lidiar con la incertidumbre de qué preparar.
+        Además de compartir recetas, nuestra red social también ofrece una comunidad activa y amigable de amantes de la comida. Los usuarios podrán intercambiar consejos y trucos culinarios, e incluso participar en desafíos y concursos gastronómicos mediante las publicaciones. Esta interacción social en torno a la comida crea un ambiente acogedor donde los usuarios pueden conectarse, compartir experiencias y ampliar sus horizontes culinarios.
+        En resumen, nuestra red social temática de comida no solo resuelve el dilema diario de qué cocinar, sino que también fomenta una comunidad de apasionados por la gastronomía. Es un lugar donde la creatividad, la inspiración y el intercambio de ideas culinarias florecen. Conviértete en parte de nuestra red y descubre un mundo de sabores y emocionantes descubrimientos culinarios. ¡La aventura gastronómica te espera!
+        Tiempo empleado: aproximadamente 20 minutos.
+        Ubicación: todo el código
+
 
 **SOLUCIÓN**
 
 *Gestión de errores:*
 
-Durante el proyecto nos hemos encontrado con un gran número de errores y problemas que al principio no sabíamos solventar. Algunos de estos fallos los hemos
-podido solucionar gracias a Internet y sus herramientas, por otra parte, han sido los profesores los encargados de ayudarnos con los errores que ni siquiera
-Internet nos podía ayudar a solucionar. 
-Nuestras trabas más significativas nos las encontramos en:
+    Durante el proyecto nos hemos encontrado con un gran número de errores y problemas que al principio no sabíamos solventar. Algunos de estos fallos los hemos
+    podido solucionar gracias a Internet y sus herramientas, por otra parte, han sido los profesores los encargados de ayudarnos con los errores que ni siquiera
+    Internet nos podía ayudar a solucionar. 
+    Nuestras trabas más significativas nos las encontramos en:
 
 · Leer el fichero txt:  
 Durante esta parte del trabajo nos encontramos con que no sabíamos cómo modificar nuestro código para que se leyesen los datos que habían dentro del fichero. 
