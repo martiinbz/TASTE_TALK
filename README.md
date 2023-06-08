@@ -1,7 +1,7 @@
-   **ESTRUCTURA DE DATOS Y ALGORITMOS II, 2022-2023**                                                                        Adrià Casals/Martín Bárcena/Arnau Gil
+#**ESTRUCTURA DE DATOS Y ALGORITMOS II, 2022-2023**                                                                        Adrià Casals/Martín Bárcena/Arnau Gil
             RED  SOCIAL: Taste Talk
             
-*INTRODUCCIÓN*
+##*INTRODUCCIÓN*
 
 Para este trabajo debíamos de crear una red social desde cero, de temática libre pero con algunos objetivos obligatorios. En lo demás, se nos dejaba bastante 
 libertad sobre cómo abordar el trabajo, aunque disponíamos de una guía que marcaba más o menos lo que se debía realizar cada sesión de prácticas, esta era 
@@ -16,62 +16,62 @@ Para cumplir los objetivos propuestos, hemos tenido que ayudarnos también de ma
 prácticamente imposible. Este material utilizado nos ha sido de gran ayuda, pues nos ha dado información, inspiración y conocimientos muy útiles sobre cómo 
 afrontar y resolver los diversos problemas con los que nos hemos encontrado a la hora de desarrollar la red social.
 
-**OBJETIVOS DEL PROYECTO**
+##**OBJETIVOS DEL PROYECTO**
 
-*Objetivos obligatorios alcanzados:*
+###*Objetivos obligatorios alcanzados:*
 
 · Implementar como mínimo una Lista (List), una Pila (Stack) y una Cola (Queue) funcionales como parte de alguna de las funcionalidades del proyecto.
 
-La lista la hemos usado para almacenar los nombres de usuario de todos los usuarios registrados en la aplicación. Hemos creado una lista dinámica que 
-almacena todos los usernames. Además, lo hemos hecho para que el índice de esta lista corresponda con el índice del array de estructuras, así, al pasar una
-función de búsqueda sobre esta lista, devolverá no solo la posición de la lista en la que se encuentra el usuario buscado, sino también la posición en la que 
-se encuentra en la estructura, facilitando así muchísimo el acceder a la información de cada usuario.
+    -La lista la hemos usado para almacenar los nombres de usuario de todos los usuarios registrados en la aplicación. Hemos creado una lista dinámica que 
+    almacena todos los usernames. Además, lo hemos hecho para que el índice de esta lista corresponda con el índice del array de estructuras, así, al pasar una
+    función de búsqueda sobre esta lista, devolverá no solo la posición de la lista en la que se encuentra el usuario buscado, sino también la posición en la que 
+    se encuentra en la estructura, facilitando así muchísimo el acceder a la información de cada usuario.
 
-La cola la hemos implementado a la hora de gestionar las solicitudes de amistad. La estructura de la cola es un poco rara, pero funciona igual que una. Hemos 
-creado una estructura enlazada al typedef de usuarios que contiene la ID del usuario que manda la solicitud y la ID del que la recibe.
-Entonces, se añade el ID al apartado de la estructura del receptor destinado a almacenar las solicitudes pendientes(es un array).
-Por último, para gestionar estas solicitudes, se van vaciando las posiciones de la cola, y se hace lo correspondiente dependiendo de si el usuario decide 
-aceptar o no la solicitud. Intentamos usar la cola de la manera convencional, pero debido a los problemas que nos daba, decidimos modificarla de esta manera,
-esto nos retrasó bastante, ya que le dedicamos bastante tiempo para que luego no nos funcionase y la tuviésemos que modificar.
+    La cola la hemos implementado a la hora de gestionar las solicitudes de amistad. La estructura de la cola es un poco rara, pero funciona igual que una. Hemos 
+    creado una estructura enlazada al typedef de usuarios que contiene la ID del usuario que manda la solicitud y la ID del que la recibe.
+    Entonces, se añade el ID al apartado de la estructura del receptor destinado a almacenar las solicitudes pendientes(es un array).
+    Por último, para gestionar estas solicitudes, se van vaciando las posiciones de la cola, y se hace lo correspondiente dependiendo de si el usuario decide 
+    aceptar o no la solicitud. Intentamos usar la cola de la manera convencional, pero debido a los problemas que nos daba, decidimos modificarla de esta manera,
+    esto nos retrasó bastante, ya que le dedicamos bastante tiempo para que luego no nos funcionase y la tuviésemos que modificar.
 
-Por último la pila, que aunque en un principio creamos la estructura y funciones de una pila dinámica (pensamos en usarla para almacenar los usuarios, pero
-finalmente pensamos que una lista sería mejor idea) no la hemos acabado implementando. Queríamos también implementarla para almacenar las publicaciones, pero 
-nos dio bastantes problemas y optamos por hacerlo con un método más sencillo.
+    Por último la pila, que aunque en un principio creamos la estructura y funciones de una pila dinámica (pensamos en usarla para almacenar los usuarios, pero
+    finalmente pensamos que una lista sería mejor idea) no la hemos acabado implementando. Queríamos también implementarla para almacenar las publicaciones, pero 
+    nos dio bastantes problemas y optamos por hacerlo con un método más sencillo.
 
-Tiempo: 
-Lista dinámica: 60min
-Cola:120mins
-Pila: 60mins
+    -Tiempo: 
+        *Lista dinámica: 60min
+        *Cola:120mins
+        *Pila: 60mins
 
-Ubicación: 
-Lista: declaración en menu_principal.c, lineas 43-44, pero se le reasigna memoria en varias partes del código. 
-Cola: estructura en estructuras.h, lineas 31-34. Se usa en las funciones relacionadas con las solicitudes, ubicadas en enviar_solicitudes.c. 
-Pila: la estructura se encuentra en estructuras.h, lineas 25-30. Las funciones se encuentran en funciones_pila_usuario.c (la pila no se usa).
+    -Ubicación: 
+        *Lista: declaración en menu_principal.c, lineas 43-44, pero se le reasigna memoria en varias partes del código. 
+        *Cola: estructura en estructuras.h, lineas 31-34. Se usa en las funciones relacionadas con las solicitudes, ubicadas en enviar_solicitudes.c. 
+        *Pila: la estructura se encuentra en estructuras.h, lineas 25-30. Las funciones se encuentran en funciones_pila_usuario.c (la pila no se usa).
 
 · Implementar funcionalmente uno de los algoritmos de búsqueda que se verán dentro del curso (LinearSearch o BinarySearch).
 
-En nuestra red social, hemos implementado un algoritmo de búsqueda secuencial que se ha utilizado en múltiples ocasiones a lo largo del código. Esta 
-función desempeña un papel crucial, ya que permite encontrar la posición de un usuario específico en la lista de usuarios mediante un bucle for, devolviendo 
-su índice correspondiente. Este índice es de suma importancia, porque proporciona acceso a la estructura de datos asociada a ese usuario en especifico. 
-La función de búsqueda secuencial se utiliza en diversas ocasiones durante la ejecución del programa. Por ejemplo, se emplea para verificar si un usuario 
-específico está registrado en la red social. Además, esta función se utiliza para obtener el ID del usuario correspondiente, lo que nos permite llevar a cabo 
-una serie de acciones importantes, como validar su contraseña o realizar operaciones en nombre de ese usuario específico. Gracias a esta función de búsqueda 
-secuencial,podemos localizar rápidamente la posición de un usuario en la lista de usuarios y acceder a su información ubicada en la estructura de datos. 
-En resumen, el algoritmo de búsqueda secuencial que hemos implementado en nuestra red social es una herramienta esencial que nos permite localizar y acceder 
-a la información de los usuarios de manera eficiente y segura. Su utilización en varias partes del código nos ayuda a realizar distintas tareas, como la 
-verificación de usuarios, la validación de contraseñas y poder realizar acciones como un usuario en específico.
+    En nuestra red social, hemos implementado un algoritmo de búsqueda secuencial que se ha utilizado en múltiples ocasiones a lo largo del código. Esta 
+    función desempeña un papel crucial, ya que permite encontrar la posición de un usuario específico en la lista de usuarios mediante un bucle for, devolviendo 
+    su índice correspondiente. Este índice es de suma importancia, porque proporciona acceso a la estructura de datos asociada a ese usuario en especifico. 
+    La función de búsqueda secuencial se utiliza en diversas ocasiones durante la ejecución del programa. Por ejemplo, se emplea para verificar si un usuario 
+    específico está registrado en la red social. Además, esta función se utiliza para obtener el ID del usuario correspondiente, lo que nos permite llevar a cabo 
+    una serie de acciones importantes, como validar su contraseña o realizar operaciones en nombre de ese usuario específico. Gracias a esta función de búsqueda 
+    secuencial,podemos localizar rápidamente la posición de un usuario en la lista de usuarios y acceder a su información ubicada en la estructura de datos. 
+    En resumen, el algoritmo de búsqueda secuencial que hemos implementado en nuestra red social es una herramienta esencial que nos permite localizar y acceder 
+    a la información de los usuarios de manera eficiente y segura. Su utilización en varias partes del código nos ayuda a realizar distintas tareas, como la 
+    verificación de usuarios, la validación de contraseñas y poder realizar acciones como un usuario en específico.
 
-Tiempo: 5min
-Ubicación: declaración en login.c, líneas 5-12. Uso durante varias partes del código.
+    -Tiempo: 5min
+    -Ubicación: declaración en login.c, líneas 5-12. Uso durante varias partes del código.
 
 · Implementar funcionalmente uno de los algoritmos de ordenamiento que se verán a lo largo del curso (InsertionSort, BubbleSort, MergeSort o QuickSort).
 
-Uno de los objetivos para este proyecto era implementar uno de los algoritmos de sorting vistos en clase.
-Desgraciadamente, no hemos sido capaces de implementarlo en nuestra red social, ya que venía ligado con la implementación de un diccionario o tabla hash, cosa 
-que tampoco hemos sido capaces de hacer. 
-Nuestra idea era implementar el algoritmo para ordenar las palabras de las publicaciones contenidas en el diccionario, y así poder obtener las 10 palabras más 
-usadas en nuestra red social. Debido a que nos atascamos más de la cuenta en otras funciones de la aplicación, por problemas de tiempo, y por su complejidad, 
-no hemos podido implementar el diccionario, y, por lo tanto, tampoco hemos podido implementar el algoritmo de ordenamiento.
+    Uno de los objetivos para este proyecto era implementar uno de losalgoritmos de sorting vistos en clase. Nosotros hemos decidido implementar el algoritmo de BubbleSort, un algoritmo simple, pero efectivo, ya que tampoco íbamos a necesitar recorrer un array excesivamente grande.
+
+    Este algoritmo lo hemos usado para ordenar las palabras contenidas en el diccionario de las publicaciones según su número de apariciones, para así luego poder saber las tendencias de la aplicación (las 10 palabras más usadas).
+    Estos algoritmos son de suma importancia para hacer nuestra red social más eficiente y conseguir tiempos de ejecución menores.
+    Tiempo: 30 min.
+    Ubicación: diccionario.c, lineas 47-58
 
 · Implementar o bien un Diccionario (Dictionary) o bien una tabla Hash (HashTable) funcionales.
 
