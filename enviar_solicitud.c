@@ -112,3 +112,50 @@ void imprimir_lista_amigos(int userId, Usuario u[]) { //funcion que imprime la l
     }
 }
 
+void findFriends(Usuario u[], int numero_usuarios, int indice_usuario) {
+    char decision[10];
+    printf("Buscando cocineros similares...\n");
+    for (int i = 0; i < numero_usuarios; i++) {
+        // Ignoramos si el usuario es él mismo
+        for(int j=0;j<numero_usuarios;j++){
+            if(strcmp(u[i].usuario,u[indice_usuario].nombre_amigos[j].nombre_amigo)==0){
+                i++;
+                break;
+            }
+        }
+        if (strcmp(u[i].usuario, u[indice_usuario].usuario) == 0)
+            continue;
+
+        // Comprobar si la edad coincide
+        if (u[i].edad ==  u[indice_usuario].edad) {
+            printf("\nEl usuario %s y tu teneis la misma edad, quieres enviarle una solicitud de amistad? (si/no)\n", u[i].usuario);
+            scanf("%s",decision);
+            if(strcmp(decision,"si")==0){
+                sendFriendRequest( indice_usuario, i);
+            }
+            if(strcmp(decision,"no")==0){
+                printf("\nNo se ha enviado la solicitud\n");
+            }
+            if(strcmp(decision,"si")!=0 && strcmp(decision,"no")!=0){
+                printf("\nRespuesta inválida,la decision ha quedado pendiente.\n");
+            }
+        }
+
+        // Comprobar si el plato favorito coincide
+        if (strcmp(u[i].platos_favoritos, u[indice_usuario].platos_favoritos) == 0) {
+            printf("\nEl usuario %s y tu teneis el mismo plato favorito, quieres enviarle una solicitud de amistad?(si/no)\n", u[i].usuario);
+            scanf("%s",decision);
+            if(strcmp(decision,"si")==0){
+                sendFriendRequest( indice_usuario, i);
+
+            }
+            if(strcmp(decision,"no")==0){
+                printf("\nNo se ha enviado la solicitud\n");
+            }
+            if(strcmp(decision,"si")!=0 && strcmp(decision,"no")!=0){
+                printf("\nRespuesta inválida,la decision ha quedado pendiente.\n");
+            }
+        }
+    }
+    printf( "\nYa no hay mas sugerencia de amistad para ti\n");
+}

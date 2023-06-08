@@ -48,6 +48,9 @@ void imprimirPalabrasMasUsadas(ConteoPalabras* conteo, int numPalabras) {
     // Algoritmo BubbleSort para ordenar palabras en orden descendiente segun sus apariciones
     int i, j;
     for (i = 0; i < numPalabras - 1; i++) {
+
+
+        
         for (j = 0; j < numPalabras - i - 1; j++) {
             if (conteo[j].conteo < conteo[j + 1].conteo) {
                 ConteoPalabras temp = conteo[j];

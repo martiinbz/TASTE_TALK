@@ -39,7 +39,7 @@ typedef struct {
 
 //***ESTRUCTURA PARA LOS AMIGOS***//
 typedef struct{
-    char nombre_amigo[20]
+    char nombre_amigo[20];
 }Amigos;
 //****ESTRUCTURA PARA LA INFORMACIÓN DE LOS USUARIOS****
  typedef struct {
@@ -58,7 +58,7 @@ typedef struct{
     int receivedFriendRequests[50]; // IDs de las solicitudes de amistad recibidas
     int numReceivedFriendRequests; // Número de solicitudes de amistad recibidas
 } Usuario;
- ///ESTRUCTURA PARA CONTAR LAS PALABRAS///
+ ///ESTRUCTURA PARA CONTAR LAS PALABRAS(DICCIONARIO)///
 typedef struct {
     char palabra[100];
     int conteo;
@@ -78,4 +78,5 @@ void contarPalabras(Usuario* u, int numero_de_usuario, ConteoPalabras* conteo, i
 void imprimirPalabrasMasUsadas(ConteoPalabras* conteo, int numPalabras);
 void imprimir_lista_amigos(int userId, Usuario u[]);
 void ver_perfil(Usuario u[],int indice_usuario);
+void findFriends(Usuario u[], int numero_usuarios, int indice_usuario);
 
