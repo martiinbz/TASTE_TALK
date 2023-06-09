@@ -48,7 +48,7 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunt
 };
 
 void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide al usuario que ingrese una opción según lo que quiera hacer. cada opción lleva a una función diferente.
-    int numero_de_palabras;
+   int numero_de_palabras;
     struct ConteoPalabras *conteo[1000];
     FILE *fichero; //esto abre el .txt que contiene la informacion de los usuarios
     char filename[] = "usuarios.txt";
@@ -58,8 +58,14 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
     }
     int opcion = 0, numero_de_usuarios = 0;
     char **lista_de_usuarios;
-    lista_de_usuarios = (char **) malloc(
-            sizeof(char *) * (numero_de_usuarios + 1));//creamos la lista dinamica con capacidad inicial 1
+    lista_de_usuarios = (char **) malloc(sizeof(char *) * (numero_de_usuarios + 1));//creamos la lista dinamica con capacidad inicial 1
+    printf(" _____ ___   _____ _____ _____   _____ ___   _      _   __\n"
+           "|_   _/ _ \\ /  ___|_   _|  ___| |_   _/ _ \\ | |    | | / /\n"
+           "  | |/ /_\\ \\\\ `--.  | | | |__     | |/ /_\\ \\| |    | |/ / \n"
+           "  | ||  _  | `--. \\ | | |  __|    | ||  _  || |    |    \\ \n"
+           "  | || | | |/\\__/ / | | | |___    | || | | || |____| |\\  \\\n"
+           "  \\_/\\_| |_/\\____/  \\_/ \\____/    \\_/\\_| |_/\\_____/\\_| \\_/");
+
     printf("\n=============================");
     printf("\n Bienvenido a Taste Talk!\n");
     printf("=============================\n");
@@ -69,8 +75,7 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
         printf("\n\t 2. Registrar usuarios desde un fichero");
         printf("\n\t 3. Lista de Usuarios registrados");
         printf("\n\t 4. Iniciar sesion");
-        printf("\n\t 5. Palabras en tendencia\n");
-        printf("\n\t 6. Salir de la aplicacion\n");
+        printf("\n\t 5. Salir de la aplicacion\n");
         printf("=============================\n");
         scanf("%d", &opcion);
         if (opcion == 1) {
@@ -139,7 +144,6 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
         }
         if (opcion==6){ //salir de la app.
             printf("\nGracias por usar nuestra aplicacion!\n Hecha por:\n Martin Barcena \n Arnau Gil \n Adria Casals");
-            printf("\n\n Que viva la comida!");
             break;
         }
 
