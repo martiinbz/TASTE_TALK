@@ -39,11 +39,11 @@ void recopilar_datos( Usuario u[],int numero_de_usuarios){ //con esto se pregunt
     printf("\nDe donde eres?");
     scanf("%s",u[numero_de_usuarios].ubicacion);
 
-    printf("\nCuales son tus 5 platos favoritos? Introducelos separados por una coma");
+    printf("\nCual es tu plato favorito?");
     scanf("%s",u[numero_de_usuarios].platos_favoritos);
     printf("\n El usuario %s se ha registrado correctamente!",u[numero_de_usuarios].usuario);
 
-    printf("\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
+    //printf("\n Name: %s \n User: %s  \n contra: %s \n edad: %d \n email: %s \n ubi: %s \n platos: %s",u[numero_de_usuarios].nombre,u[numero_de_usuarios].usuario,u[numero_de_usuarios].contrasena,*u[numero_de_usuarios].edad,u[numero_de_usuarios].email,u[numero_de_usuarios].ubicacion,u[numero_de_usuarios].platos_favoritos);
     //esto es para imprimir los datos recolectados, por si hay algun error y necesitamos mirar si los recolecta bien
 };
 
@@ -75,6 +75,7 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
         printf("\n\t 2. Registrar usuarios desde un fichero");
         printf("\n\t 3. Lista de Usuarios registrados");
         printf("\n\t 4. Iniciar sesion");
+        printf("\n\t 5. Tendencias\n");
         printf("\n\t 5. Salir de la aplicacion\n");
         printf("=============================\n");
         scanf("%d", &opcion);
@@ -143,7 +144,7 @@ void menu_principal(Usuario u[]) {      //esta función imprime el menu y pide a
 
         }
         if (opcion==6){ //salir de la app.
-            printf("\nGracias por usar nuestra aplicacion!\n Hecha por:\n Martin Barcena \n Arnau Gil \n Adria Casals");
+            printf("\nGracias por usar nuestra aplicacion!\n Hecha por:\n Martin Barcena \n Arnau Gil \n Adria Casals\n Que viva la comida!");
             break;
         }
 
