@@ -1,4 +1,5 @@
-****ESTRUCTURA DE DATOS Y ALGORITMOS II, 2022-2023****                                                                       Adrià Casals/Martín Bárcena/Arnau Gil
+****ESTRUCTURA DE DATOS Y ALGORITMOS II, 2022-2023****                                                                       
+Adrià Casals/Martín Bárcena/Arnau Gil
             RED  SOCIAL: Taste Talk
             
 ***INTRODUCCIÓN***
@@ -130,12 +131,8 @@ del código constantes.
     Ubicación: usuarios.txt y menu_prinicipal.c (lineas 104-109 del código)
 
 · Red social temática
-
-    -La creación de una red social temática ha sido uno de nuestros principales objetivos, ya que buscábamos ofrecer a los usuarios una experiencia única y especializada. Después de evaluar diversas ideas innovadoras, 
-    llegamos a la conclusión de que una red social de comida sería una opción fascinante y sin precedentes. Ninguno de los tres miembros del grupo había escuchado hablar antes de una propuesta similar, lo que nos motivó
-    aún más a desarrollar esta idea.
-    Nuestra red social de comida está diseñada específicamente para que los usuarios puedan compartir sus recetas favoritas, así como los platos deliciosos que han disfrutado durante el día. Esto resuelve uno de los
-    problemas comunes en muchos hogares: la falta de inspiración a la hora de decidir qué cocinar para las comidas o cenas. Con tan solo unos cuantos clics, nuestros usuarios tendrán acceso a un amplio abanico de ideas culinarias, lo que les permitirá disfrutar de deliciosas comidas sin tener que lidiar con la incertidumbre de qué preparar.
+    La creación de una red social temática ha sido uno de nuestros principales objetivos, ya que buscábamos ofrecer a los usuarios una experiencia única y especializada. Después de evaluar diversas ideas innovadoras, llegamos a la conclusión de que una red social de comida sería una opción fascinante y sin precedentes. Ninguno de los tres miembros del grupo había escuchado hablar antes de una propuesta similar, lo que nos motivó aún más a desarrollar esta idea.
+    Nuestra red social de comida está diseñada específicamente para que los usuarios puedan compartir sus recetas favoritas, así como los platos deliciosos que han disfrutado durante el día. Esto resuelve uno de los problemas comunes en muchos hogares: la falta de inspiración a la hora de decidir qué cocinar para las comidas o cenas. Con tan solo unos cuantos clics, nuestros usuarios tendrán acceso a un amplio abanico de ideas culinarias, lo que les permitirá disfrutar de deliciosas comidas sin tener que lidiar con la incertidumbre de qué preparar.
     Además de compartir recetas, nuestra red social también ofrece una comunidad activa y amigable de amantes de la comida. Los usuarios podrán intercambiar consejos y trucos culinarios, e incluso participar en desafíos y concursos gastronómicos mediante las publicaciones. Esta interacción social en torno a la comida crea un ambiente acogedor donde los usuarios pueden conectarse, compartir experiencias y ampliar sus horizontes culinarios.
     En resumen, nuestra red social temática de comida no solo resuelve el dilema diario de qué cocinar, sino que también fomenta una comunidad de apasionados por la gastronomía. Es un lugar donde la creatividad, la inspiración y el intercambio de ideas culinarias florecen. Conviértete en parte de nuestra red y descubre un mundo de sabores y emocionantes descubrimientos culinarios. ¡La aventura gastronómica te espera!
     Tiempo empleado: aproximadamente 20 minutos.
@@ -143,43 +140,43 @@ del código constantes.
 
 
 **SOLUCIÓN**
-*Arquitectura del sistema* 
-
-            En nuestro sistema hemos empleado los siguientes bloques: 
-            Aplicación: En esta parte, se encuentran las instrucciones y características esenciales de la aplicación. Es el lugar donde se procesan los datos y se maneja la comunicación entre la base de datos y la   º               interfaz de usuario.
-            Servidor: En nuestro caso no se considera un bloque principal pero si fuese una red social online lo tendríamos que haber implementado para que diferentes usuarios desde diferentes dispositivos pudiesen interactuar a la vez.
-            Base de datos: Nuestra base de datos se basa en un fichero llamado usuarios.txt. En él nos encontramos una lista de 20 usuarios con su respectivos datos (nombres, contraseñas, etc), de esta manera, estos usuarios pueden ser registrados automáticamente al pulsar una de las opciones del menú.
-            Interfaz de usuario: Esta parte de la aplicación es donde nos comunicamos con la red social. Aquí es donde solicitamos información como nombres, preferencias y otros datos a través de la pantalla. También es donde se nos muestra la variedad de menús e interfaces. La interfaz es la encargada de solicitar los datos que luego se guardarán en las bases de datos y estructuras.
 
 *Gestión de errores:*
 
-    Durante el proyecto nos hemos encontrado con un gran número de errores y problemas que al principio no sabíamos solventar. Algunos de estos fallos los hemos
-    podido solucionar gracias a Internet y sus herramientas, por otra parte, han sido los profesores los encargados de ayudarnos con los errores que ni siquiera
-    Internet nos podía ayudar a solucionar. 
-    Nuestras trabas más significativas nos las encontramos en:
+Durante el proyecto nos hemos encontrado con un gran número de errores y problemas que al principio no sabíamos solventar. Algunos de estos fallos los hemos
+podido solucionar gracias a Internet y sus herramientas, por otra parte, han sido los profesores los encargados de ayudarnos con los errores que ni siquiera
+Internet nos podía ayudar a solucionar. 
+Nuestras trabas más significativas nos las encontramos en:
 
 · Leer el fichero txt:  
-
-    Durante esta parte del trabajo nos encontramos con que no sabíamos cómo modificar nuestro código para que se leyesen los datos que habían dentro del fichero. 
-    El punto está en que el programa abría el fichero pero no leía los datos que habíamos insertado. Esto, tras rompernos la cabeza, lo consultamos con nuestro 
-    profesor de prácticas, Héctor Florido Fontanet, el cual nos brindó la solución a nuestro problema.
+Durante esta parte del trabajo nos encontramos con que no sabíamos cómo modificar nuestro código para que se leyesen los datos que habían dentro del fichero. 
+El punto está en que el programa abría el fichero pero no leía los datos que habíamos insertado. Esto, tras rompernos la cabeza, lo consultamos con nuestro 
+profesor de prácticas, Héctor Florido Fontanet, el cual nos brindó la solución a nuestro problema.
 
 · Uso del GitHub: 
-
-    Al inicio del trabajo tuvimos varios problemas con esta plataforma ya que al subir el código habían partes que no se actualizaban. Es por eso que, tal
-    y como hemos comentado al principio de este reporte, optamos por la opción de usar CodeWithMe. Fue en una clase en la que le preguntamos al profesor como 
-    arreglar nuestra falla. Este nos ayudó y pudimos empezar a usar el GitHub.
+Al inicio del trabajo tuvimos varios problemas con esta plataforma ya que al subir el código habían partes que no se actualizaban. Es por eso que, tal
+y como hemos comentado al principio de este reporte, optamos por la opción de usar CodeWithMe. Fue en una clase en la que le preguntamos al profesor como 
+arreglar nuestra falla. Este nos ayudó y pudimos empezar a usar el GitHub.
 
 · Envío de solicitudes:
+La tarea de enviar solicitudes desde la sesión iniciada de un usuario a otro usuario fue otra de las tareas que más nos costó. Al principio no sabíamos 
+cómo enfocar el código para que hiciese esta función, después, cuando logramos entender cómo hacerlo, vimos que no solo enviaba la solicitud al usuario deseado,
+sino que enviaba la solicitud a todos los usuarios registrados. Para solucionar esto estuvimos revisando y modificando el código una y otra vez hasta que 
+finalmente dimos con la línea de código que fallaba y, como suele pasar en el código de un programa, el error resultó ser una tontería minúscula que nos 
+desmontaba toda la función.
 
-    La tarea de enviar solicitudes desde la sesión iniciada de un usuario a otro usuario fue otra de las tareas que más nos costó. Al principio no sabíamos 
-    cómo enfocar el código para que hiciese esta función, después, cuando logramos entender cómo hacerlo, vimos que no solo enviaba la solicitud al usuario deseado,
-    sino que enviaba la solicitud a todos los usuarios registrados. Para solucionar esto estuvimos revisando y modificando el código una y otra vez hasta que 
-    finalmente dimos con la línea de código que fallaba y, como suele pasar en el código de un programa, el error resultó ser una tontería minúscula que nos 
-    desmontaba toda la función.
-    
+*Arquitectira del sistema:*
 
+En nuestro sistema hemos empleado los siguientes bloques:
 
+· Aplicación: En esta parte, se encuentran las instrucciones y características esenciales de la aplicación. Es el lugar donde se procesan los datos y se maneja 
+la comunicación entre la base de datos y la interfaz de usuario.
 
+· Servidor: En nuestro caso no se considera un bloque principal pero si fuese una red social online lo tendríamos que haber implementado para que diferentes usuarios desde diferentes dispositivos pudiesen interactuar a la vez.
 
+· Base de datos: Nuestra base de datos se basa en un fichero llamado usuarios.txt. En él nos encontramos una lista de 20 usuarios con su respectivos datos 
+(nombres, contraseñas, etc), de esta manera, estos usuarios pueden ser registrados automáticamente al pulsar una de las opciones del menú.
 
+· Interfaz de usuario: Esta parte de la aplicación es donde nos comunicamos con la red social. Aquí es donde solicitamos información como nombres, preferencias 
+y otros datos a través de la pantalla. También es donde se nos muestra la variedad de menús e interfaces. La interfaz es la encargada de solicitar los datos que luego se guardarán en las bases de datos y estructuras.
+![Captura de pantalla 2023-06-10 141425](https://github.com/martiinbz/EDA2/assets/131852416/b67ed6e8-26b8-4408-ab4d-cd254c2abd1e)
