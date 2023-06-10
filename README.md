@@ -1,5 +1,6 @@
 ****ESTRUCTURA DE DATOS Y ALGORITMOS II, 2022-2023****                                                                       
 Adrià Casals/Martín Bárcena/Arnau Gil
+            
             RED  SOCIAL: Taste Talk
             
 ***INTRODUCCIÓN***
