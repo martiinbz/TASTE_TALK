@@ -179,4 +179,10 @@ la comunicación entre la base de datos y la interfaz de usuario.
 
 · Interfaz de usuario: Esta parte de la aplicación es donde nos comunicamos con la red social. Aquí es donde solicitamos información como nombres, preferencias 
 y otros datos a través de la pantalla. También es donde se nos muestra la variedad de menús e interfaces. La interfaz es la encargada de solicitar los datos que luego se guardarán en las bases de datos y estructuras.
+
 ![Captura de pantalla 2023-06-10 141425](https://github.com/martiinbz/EDA2/assets/131852416/b67ed6e8-26b8-4408-ab4d-cd254c2abd1e)
+
+*Diseño de modelo de datos:*
+
+![Captura de pantalla 2023-06-10 155917](https://github.com/martiinbz/EDA2/assets/131852416/0de22c31-fce4-416c-8b03-48d9917f6351)
+
